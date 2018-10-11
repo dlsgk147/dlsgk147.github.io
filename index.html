@@ -3,16 +3,19 @@
   <head>
     <title>Title Page</title>
     <style>
+      p.menu {
+        display: inline;
+        background-image: url('https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/menu_bground.jpg');
+      }
       ol {
         width: 100%;
         height: 218px;
         margin: 0px;
         padding: 10px;
-        list-style: none;
-        background-image: url('https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/menu_bground.jpg');
       }
-      ol li {
+      ol li *{
         display: inline;
+        padding: 20px
       }
       ol li a {
         color: rgb(255,255,255);
@@ -23,7 +26,6 @@
         color: rgb(255,180,0);
         text-decoration: none;
         font-weight: bold;
-        padding: 20px
       }
       body {
         background-image: url('https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/bground.jpg');
@@ -33,20 +35,16 @@
     </style>
   </head>
   <body>
-    <div>
-      <span>
-        <h1><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/title_logo.png" alt=""></h1>
-      </span>
-      <span>
-        <ol>
-          <li><a href="#">기본 정보</a></li>
-          <li><a href="#">전술인형</a></li>
-          <li><a href="#">장비</a></li>
-          <li><a href="#">요정</a></li>
-          <li><a href="#">인형제조/장비제조</a></li>
-       </ol>
-     </span>
-    </div>
+    <p class="menu">
+      <img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/title_logo.png" alt="">
+      <ol>
+        <li><a href="#">기본 정보</a></li>
+        <li><a href="#">전술인형</a></li>
+        <li><a href="#">장비</a></li>
+        <li><a href="#">요정</a></li>
+        <li><a href="#">인형제조/장비제조</a></li>
+     </ol>
+    </p>
     <div style="width: 50%">
       <iframe width="640" height="480" src="https://www.youtube.com/embed/dq2JL_IVw0U" ></iframe>
     </div>
