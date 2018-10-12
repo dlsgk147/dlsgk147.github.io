@@ -41,7 +41,7 @@
         width: 300px;
       }
       .list {
-        list-style-type: decimal;
+        list-style-type: none;
         margin: 10px 0px 10px 0px;
         padding-left: 30px;
       }
