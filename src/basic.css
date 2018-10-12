@@ -7,6 +7,7 @@ header {
 #menu {
   background-image: url('https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/menu_bground.png');
   width: 100%;
+  min-width: 1250px;
   height: 218px;
 }
   #menu ol {
@@ -21,12 +22,13 @@ header {
   padding: 10px;
   display: table-cell;
   vertical-align: middle;
+  font-size: 16pt;
 }
   #menu ol li a {
-  color: rgb(255,255,255);
   text-decoration: none;
   font-weight: bold;
   padding: 20px;
+  font-size: 16pt;
 }
   #menu ol li a:hover {
   color: rgb(255,180,0);
@@ -37,5 +39,12 @@ header {
 body {
   background-image: url('https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/bground.jpg');
   background-repeat: repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
+  margin-left: 50px;
+  margin-top: -10px;
+}
+* {
+  color: rgb(255,255,255);
+  font-size: 11pt;
+  font-family: "THE정고딕120", "Times New Roman", sans-serif;
 }
