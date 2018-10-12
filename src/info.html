@@ -1,9 +1,598 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Home</title>
-	</head>
-	<body>
-		<span>Home Page</span>
-	</body>
+  <head>
+    <title>기본 정보</title>
+    <link type="text/css" rel="stylesheet" href="basic.css">
+    <style>
+      table {
+        border-collapse: collapse;
+        margin-left: 50px;
+        margin-right: 10px;
+        margin-botton: 10px;
+        text-align: center;
+        border: 1px solid rgb(69,69,69);
+      }
+      th {
+        padding: 10px;
+        background-color: rgb(69,69,69);
+        border: none;
+      }
+      .border {
+        background-color: rgb(0,0,0);
+        border: 1px solid rgb(69,69,69);
+      }
+      td {
+        background-color: rgb(255,255,255);
+        border: 1px solid rgb(69,69,69);
+        color: rgb(0,0,0);
+        padding: 10px;
+      }
+      p {
+        margin-top: 10px;
+        margin-bottom: 40px;
+        padding-left: 20px;
+      }
+      p[class="details"] {
+        padding-left: 40px;
+        margin-bottom: 10px;
+      }
+      div[id="index"] {
+        border: 1px solid rgb(69,69,69);
+        background-color: rgb(0,0,0);
+        position: relative;
+        margin: 50px 10px 10px 100px;
+        padding-top: 5px;
+        padding-left: 10px;
+        width: 300px;
+      }
+      .list {
+        list-style-type: decimal;
+        margin: 10px 0px 10px 0px;
+        padding-left: 30px;
+      }
+      .sublist {
+        list-style-type: circle;
+        padding-left: 20px;
+      }
+      .menu {
+        border: 1px solid rgb(69,69,69);
+        background-color: rgb(0,0,0);
+        margin: 100px 10px 10px 100px;
+        padding-left: 70px;
+        padding-right: 70px;
+        width: 1280px;
+      }
+      h1 {
+        margin-top: 40px;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      h2 {
+        font-size: 16px;
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="https://dlsgk147.github.io/index.html"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/title_logo.png" alt=""></a>
+    </header>
+    <section id="menu">
+      <ol>
+        <li><a href="https://dlsgk147.github.io/src/info.html">기본 정보</a></li>
+        <li><a href="https://dlsgk147.github.io/src/tdoll.html">전술인형</a></li>
+        <li><a href="https://dlsgk147.github.io/src/equip.html">장비</a></li>
+        <li><a href="https://dlsgk147.github.io/src/fairy.html">요정</a></li>
+        <li><a href="https://dlsgk147.github.io/src/hoc.html">중장비부대</a></li>
+        <li><a href="https://dlsgk147.github.io/src/manufacture.html">인형제조/장비제조</a></li>
+     </ol>
+    </section>
+    <div id="index">
+      목차
+      <ul class="list">
+        <li>타이틀 화면</li>
+        <li>유저 정보</li>
+        <li>수복</li>
+        <li>연구
+          <ul class="sublist">
+            <li>스킬훈련</li>
+            <li>장비강화</li>
+            <li>장비교정</li>
+            <li>요정강화</li>
+            <li>요정교정</li>
+            <li>인형개조</li>
+          </ul>
+        </li>
+        <li>전투</li>
+          <ul class="sublist">
+            <li>작전임무</li>
+            <li>군수지원</li>
+            <li>모의작전</li>
+            <li>상시이벤트</li>
+          </ul>
+        <li>숙소</li>
+          <ul class="sublist">
+            <li>숙소</li>
+            <li>부속실</li>
+          </ul>
+        <li>공방</li>
+          <ul class="sublist">
+            <li>인형제조/장비제조</li>
+            <li>편제확대</li>
+            <li>인형강화</li>
+            <li>회수, 해체</li>
+          </ul>
+        <li>편성</li>
+        <li>하단 메뉴</li>
+      <ul>
+    </div>
+    <div class="menu">
+      <h1>1. 타이틀 화면</h1>
+      <hr>
+        <img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/basic_info/title.png" alt="">
+      <p>
+        로그인 후 뜨는 화면. 상단에서 유저 정보 및 자원을 확인할 수 있다.</br>
+        우측에는 수복, 연구, 전투, 숙소, 공방, 편성 메뉴가 있다.</br>
+        우측 하단에는 이벤트, 임무, 우편, 상점, 랭킹, 친구, 사진, 고객센터, 도감, 창고, 옵션 메뉴가 있다.</br>
+        좌측 하단에서 현재 진행중인 이벤트나 업데이트 정보를 확인할 수 있다. 
+      </p>
+
+      <h1>2. 유저 정보</h1>
+      <hr>
+        <img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/basic_info/user_info.png" alt="">
+      <p>
+        유저 정보를 확인하는 화면. 닉네임, 레벨, 수집률, 자원 현황 등을 확인할 수 있고 부관, 배경을 변경할 수 있다. 
+      </p>
+
+      <h1>3. 수복</h1>
+      <hr>
+        <img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/basic_info/restore.png" alt="">
+      <p>
+        피해를 입은 인형을 고치는 메뉴. 기본적으로 4칸이 주어지며 최대 8개까지 확장 가능.</br>
+        인형 하단의 쾌속 수복 버튼을 누르면 우측 상단의 쾌속수복계약을 사용하여 즉시 수복이 완료된다. 
+      </p>
+
+      <h1>4. 연구</h1>
+      <hr>
+        <img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/basic_info/lab.png" alt="">
+      <p>
+        스킬 강화, 장비 및 요정의 강화, 교정 및 인형 개조를 담당하는 메뉴
+      </p>
+      <h2>4.1. 스킬훈련</h2>
+      <p class="details">
+         인형, 요정의 스킬 레벨을 올리는 메뉴. 레벨을 올리는 데는 훈련자료라는 자원이 소모되며 이는 모의작전의 자료훈련 등을 통해 얻을 수 있다.</br>
+        필요한 훈련자료 및 연구 시간은 아래와 같다.  
+        <table>
+          <tr>
+            <th>연구 레벨</th>
+            <th class="border" rowspan="11">전술인형</th>
+            <th>자료 종류</th>
+            <th>소모량</th>
+            <th>연구 시간(h)</th>
+            <th class="border" rowspan="11">전략요정</th>
+            <th>자료 종류</th>
+            <th>소모량</th>
+            <th>연구 시간(h)</th>
+            <th class="border" rowspan="11">전술요정</th>
+            <th>자료 종류</th>
+            <th>소모량</th>
+            <th>연구 시간(h)</th>
+          </tr>
+          <tr>
+            <td>Lv1 → Lv2</td>
+            <td rowspan="3">초급훈련자료</td>
+            <td>100</td>
+            <td>1</td>
+            <td rowspan="3">초급훈련자료</td>
+            <td>200</td>
+            <td>2</td>
+            <td rowspan="3">초급훈련자료</td>
+            <td>200</td>
+            <td>2</td>
+          </tr>           
+          <tr>
+            <td>Lv2 → Lv3</td>
+            <td>200</td>
+            <td>2</td>
+            <td>400</td>
+            <td>6</td>
+            <td>400</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>Lv3 → Lv4</td>
+            <td>300</td>
+            <td>3</td>
+            <td>600</td>
+            <td>10</td>
+            <td>600</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>Lv4 → Lv5</td>
+            <td rowspan="4">중급훈련자료</td>
+            <td>120</td>
+            <td>4</td>
+            <td rowspan="4">중급훈련자료</td>
+            <td>240</td>
+            <td>14</td>
+            <td rowspan="3">중급훈련자료</td>
+            <td>200</td>
+            <td>14</td>
+          </tr>
+          <tr>
+            <td>Lv5 → Lv6</td>
+            <td>200</td>
+            <td>6</td>
+            <td>400</td>
+            <td>20</td>
+            <td>400</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>Lv6 → Lv7</td>
+            <td>300</td>
+            <td>9</td>
+            <td>600</td>
+            <td>26</td>
+            <td>600</td>
+            <td>26</td>
+          </tr>
+          <tr>
+            <td>Lv7 → Lv8</td>
+            <td>400</td>
+            <td>12</td>
+            <td>800</td>
+            <td>32</td>
+            <td rowspan="3">고급훈련자료</td>
+            <td>200</td>
+            <td>32</td>
+          </tr>
+          <tr>
+            <td>Lv8 → Lv9</td>
+            <td rowspan="2">고급훈련자료</td>
+            <td>200</td>
+            <td>18</td>
+            <td rowspan="2">고급훈련자료</td>
+            <td>400</td>
+            <td>40</td>
+            <td>400</td>
+            <td>40</td>
+          </tr>
+          <tr>
+            <td>Lv9 → Lv10</td>
+            <td>300</td>
+            <td>24</td>
+            <td>600</td>
+            <td>48</td>
+            <td>600</td>
+            <td>48</td>
+          </tr>
+        </table>
+      </p>
+      <h2>4.2. 장비강화</h2>
+      <p class="details">
+        다른 장비와 자원을 소모하여 장비의 레벨을 올리는 메뉴.
+      </p>
+      <h2>4.3. 장비교정</h2>
+      <p class="details">
+        장비의 능력치의 증가 수치를 변동시키는 메뉴. 교정권을 사용하며 1번째는 5개, 2번째는 10개, 그 이후로는 15개를 사용한다. 
+      </p>
+      <h2>4.4. 요정강화</h2>
+      <p class="details">
+        다른 요정과 자원을 소모하여 요정의 레어도를 올리는 메뉴. 
+      </p>
+      <h2>4.5. 요정교정</h2>
+      <p class="details">
+        교정권과 자원을 소모하여 요정의 특성을 바꾸는 메뉴.
+      </p>
+      <h2>4.5. 인형개조</h2>
+      <p class="details">
+        기억파편과 코어를 소모하여 인형을 업그레이드하는 메뉴. 기억파편은 모의작전의 마인드회랑에서 얻을 수 있다. </br>
+        각 단계별 필요한 조건, 변경점 및 필요 자원은 다음과 같다. 
+        <table>
+          <tr>
+            <th>단계</th>
+            <th>조건</th>
+            <th>변경점</th>
+            <th>소모 자원</th>
+          </tr>
+          <tr>
+            <td>MOD1</td>
+            <td>
+              레벨 100</br>
+              호감도 100</br>
+              편제 5링크
+            </td>
+            <td>
+              만렙 100 → 110</br>
+              레어도 2/3성 → 4성, 4성 → 5성
+            </td>
+            <td>
+              2성: 코어 10 기억파편 200</br>
+              3성: 코어 15 기억파편 200</br>
+              4성: 코어 20 기억파편 200</br>
+            </td>
+          </tr>
+          <tr>
+            <td>MOD2</td>
+            <td>
+              레벨 110</br>
+              호감도 100</br>
+              MOD1 업그레이드
+            </td>
+            <td>
+              만렙 110 → 115</br>
+              MOD2 패시브 스킬
+            </td>
+            <td>
+              2성: 코어 20 기억파편 600</br>
+              3성: 코어 30 기억파편 800</br>
+              4성: 코어 40 기억파편 1000</br>
+            </td>
+          </tr>
+          <tr>
+            <td>MOD3</td>
+            <td>
+              레벨 115</br>
+              호감도 100</br>
+              MOD2 업그레이드
+            </td>
+            <td>
+              만렙 115 → 120</br>
+              신규 전용장비</br>
+              신규 일러스트 및 SD</br>
+              대사 추가
+              호감도 제한 200
+            </td>
+            <td>
+              2성: 코어 30 기억파편 1200</br>
+              3성: 코어 45 기억파편 1600</br>
+              4성: 코어 60 기억파편 2000</br>
+            </td>
+          </tr>
+        </table>
+      </p>
+
+      <h1>5. 전투</h1>
+      <hr>
+        <img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/basic_info/theater.png" alt="">
+      <p>
+        전투 및 군수지원, 모의 작전 등을 실행하는 메뉴
+      </p>
+      <h2>5.1. 작전임무</h2>
+      <p class="details">
+        실제 전투를 하는 전역에 입장할 수 있는 메뉴. 0전역부터 10전역까지 개방되어 있다. 
+      </p>
+      <h2>5.2. 군수지원</h2>
+      <p class="details">
+        일정 시간 제대를 파견하여 자원 및 아이템을 얻을 수 있는 메뉴.</br>
+        제대 리더의 레벨이 일정 레벨 이상이어야 하며 10전역으로 갈수록 요구 레벨이 높아진다. 
+      </p>
+      <h2>5.3. 모의작전</h2>
+      <p class="details">
+        모의작전점수를 소모하여 연구자료, 강화캡슐 등을 얻을 수 있는 전역</br>
+        방어훈련은 무조건 5점을 소모하며 이외에는 단계별로 1/2/3점을 소모한다. 
+        모의작전의 종류는 다음과 같다. 
+        <table>
+          <tr>
+            <th>종류</th>
+            <th>요일</th>
+            <th>획득 자원</th>
+            <th>비고</th>
+          </tr>
+          <tr>
+            <td>강화훈련</td>
+            <td>월, 목, 일</td>
+            <td>
+              강화캡슐 1개</br>
+              강화캡슐 2개</br>
+              강화캡슐 3개</br>
+            </td>
+            <td>발판 1/2/3개 존재. 자원 또는 강화캡슐 획득 가능</td>
+          </tr>
+          <tr>
+            <td>자료추출</td>
+            <td>화, 금, 일</td>
+            <td>
+              초급훈련자료 150~220(실패시 50)</br>
+              중급훈련자료 50~100(실패시 20)</br>
+              고급훈련자료 20~55(실패시 10)</br>
+            </td>
+            <td>
+              드론 HP 10000</br>
+              드론 HP 20000</br>
+              드론 HP 40000</br>
+            </td>
+          </tr>
+          <tr>
+            <td>경험특훈</td>
+            <td>수, 토, 일</td>
+            <td>
+              경험치 20000</br>
+              경험치 80000</br>
+              경험치 240000</br>
+            </td>
+            <td>
+              적측 작전능력 1600</br>
+              적측 작전능력 6000</br>
+              적측 작전능력 16000</br>
+            </td>
+          </tr>
+          <tr>
+            <td>마인드회랑</td>
+            <td>상시 개방</td>
+            <td>
+              기억파편 8개</br>
+              기억파편 20개</br>
+              기억파편 30개</br>
+            </td>
+            <td>
+              적측 작전능력 14000</br>
+              적측 작전능력 20000</br>
+              적측 작전능력 28000</br>
+            </td>
+          </tr>
+          <tr>
+            <td>방어훈련</td>
+            <td>상시 개방</td>
+            <td>
+              각 라운드마다 교정권 획득 가능</br>
+              10층 단위로 자원, 보석, 교정권 획득
+            </td>
+            <td>
+              적측 작전능력 14000</br>
+              적측 작전능력 20000</br>
+              적측 작전능력 28000</br>
+            </td>
+          </tr>
+        </table>
+      </p>
+      <h2>5.4. 상시이벤트</h2>
+      <p class="details">
+        이전에 열린 이벤트 전역에 입장할 수 있는 메뉴</br>
+        현재 저체온층과 딥다이브 전역이 열려있다. 
+      </p>
+
+      <h1>6. 숙소</h1>
+      <hr>
+        <img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/basic_info/dormitory.png" alt="">
+      <p>
+        전술인형의 내무반 및 부속실 등을 위한 메뉴
+      </p>
+      <h2>6.1. 숙소</h2>
+      <p class="details">
+        전술인형이 지내는 숙소를 보여주는 메뉴</br>
+        기본으로 2개가 개방되어 있으며 제대 수만큼 보석으로 개방 가능. 최대 10개</br>
+        숙소의 수에 따라 전지의 최대량이 바뀐다. </br>
+        가구를 배치하면 안락도를 높일 수 있다. 안락도는 전지 충전 속도에 영향을 미친다. </br>
+      </p>
+      <h2>6.2. 부속실</h2>
+      <p class="details">
+        구호소, 자료실 등을 묶어놓은 메뉴. 자세한 설명은 아래를 참고</br>
+        <ul style="list-style-type: disk; margin-left: 30px;">
+          <li>구호소: 애완동물을 입양할 수 있다. 애완동물은 안락도를 높이는 데 쓸 수 있다. </li>
+          <li>자료실: 인형 또는 중장비부대의 경험치를 높이는 작전보고서를 만든다. </li>
+          <li>요정의 방: 요정의 지령 최대 수, 충전 속도 등과 관련된 메뉴이다. </li>
+          <li>카페: 스킨이 있는 인형의 스토리나 공식 만화 등을 볼 수 있는 메뉴이다. </li>
+          <li>정보 센터: 자료 분석으로 중장비부대, 칩셋을 얻거나 정보 임무를 수행하는 메뉴이다. 자세한 사항은 중장비부대 페이지 참조. </li>
+          <li>격납고: 중장비부대의 훈련 및 칩셋 관리를 할 수 있다. </li>
+          <li>예비 숙소: 미리 가구를 배치해볼 수 있는 숙소이다. </li>
+        </ul>
+      </p>
+
+      <h1>7. 공방</h1>
+      <hr>
+        <img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/basic_info/factory.png" alt="">
+      <p>
+        인형/장비의 제조, 회수와 인형강화, 편제확대를 할 수 있는 메뉴
+      </p>
+      <h2>7.1. 인형제조/장비제조</h2>
+      <p class="details">
+        인형과 장비를 제조할 수 있는 메뉴이다. 자세한 사항은 인형제조/장비제조 페이지 참조. 
+      </p>
+      <h2>7.2. 편제확대</h2>
+      <p class="details">
+        인형의 링크 수를 늘릴 수 있는 메뉴이다. 인형은 1명에서 시작하여 최대 5명까지 링크를 늘릴 수 있다. </br>
+        편제확대에는 같은 종류의 인형 또는 코어가 필요하다. 인형과 코어를 섞어서 사용할 수도 있다. </br>
+        편제확대에 필요한 조건과 인형/코어 요구량은 다음과 같다. 
+        <table>
+          <tr>
+            <th>링크 수(요구 레벨)</th>
+            <th>★★</th>
+            <th>★★★</th>
+            <th>★★★★</th>
+            <th>★★★★★</th>
+          </tr>
+          <tr>
+            <td>1→2 (Lv 10)</td>
+            <td>1/1</td>
+            <td>1/3</td>
+            <td>1/9</td>
+            <td>1/15</td>
+          </tr>
+          <tr>
+            <td>2→3 (Lv 10)</td>
+            <td>1/1</td>
+            <td>1/3</td>
+            <td>1/9</td>
+            <td>1/15</td>
+          </tr>
+          <tr>
+            <td>3→4 (Lv 10)</td>
+            <td>2/2</td>
+            <td>2/6</td>
+            <td>2/18</td>
+            <td>2/30</td>
+          </tr>
+          <tr>
+            <td>4→5 (Lv 10)</td>
+            <td>3/3</td>
+            <td>3/9</td>
+            <td>3/27</td>
+            <td>3/45</td>
+          </tr>
+        </table>
+      </p>
+
+      <h1>8. 편성</h1>
+      <hr>
+        <img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/basic_info/formation.png" alt="">
+      <p>
+        제대를 구성할 수 있는 메뉴</br>
+        각 제대에는 0~5명의 인형과 0~1명의 요정 배치 가능</br>
+        초기 2제대가 개방되어 있고 보석을 투자하여 최대 10제대까지 개방 가능</br>
+        진형설정 버튼을 통해 인형의 위치를 변경할 수 있다. 
+      </p>
+
+      <h1>9. 하단 메뉴</h1>
+      <hr>
+      <h2>9.1. 이벤트</h2>
+      <p class="details">
+        로그인 보상, 공지사항, 이벤트 탭 등을 확인할 수 있는 메뉴
+      </p>
+      <h2>9.2. 임무</h2>
+      <p class="details">
+        일간/주간 임무, 메인 임무, 개인 임무 등을 확인할 수 있는 메뉴
+      </p>
+      <h2>9.3. 우편</h2>
+      <p class="details">
+        보상 우편, 공지 우편 등을 확인할 수 있는 메뉴
+      </p>
+      <h2>9.4. 상점</h2>
+      <p class="details">
+        일종의 캐시인 보석이나 자원, 계약 등을 구매할 수 있는 메뉴
+      </p>
+      <h2>9.5. 랭킹</h2>
+      <p class="details">
+        이벤트 랭킹, 수집률 랭킹 등을 확인할 수 있는 메뉴
+      </p>
+      <h2>9.6. 친구</h2>
+      <p class="details">
+        친구 목록, 자신의 ID 카드 등을 볼 수 있는 메뉴
+      </p>
+      <h2>9.7. 사진</h2>
+      <p class="details">
+        부관 일러스트와 함께 사진을 찍을 수 있는 메뉴</br>
+        이걸 쓰면 꽤 자괴감이 들 것 같다</br>
+      </p>
+      <h2>9.8. 고객센터</h2>
+      <p class="details">
+        고객센터에 상담을 할 수 있는 메뉴</br>
+        엉뚱하게도 버그 수정에 쓰인 적도 있다. </br>
+      </p>
+      <h2>9.9. 도감</h2>
+      <p class="details">
+        전술 인형, 요정 리스트나 스토리 등을 감상할 수 있는 메뉴</br>
+      </p>
+      <h2>9.10. 창고</h2>
+      <p class="details">
+        현재 보유중인 인형, 장비, 자원 등을 볼 수 있는 메뉴</br>
+      </p>
+      <h2>9.11. 옵션</h2>
+      <p class="details">
+        게임 옵션을 조절하는 메뉴</br>
+      </p>
+    </div>
+  </body>
 </html>
