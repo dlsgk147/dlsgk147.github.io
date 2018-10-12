@@ -3,18 +3,29 @@
   <head>
     <title>Title Page</title>
     <style>
-      p.menu {
-        background-image: url('https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/menu_bground.jpg');
+      header {
+        margin-top: 50px;
+        margin-botton: 50px;
+        margin-left: 10px;
+        float: left;
       }
-      ol {
+      #menu {
+        background-image: url('https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/menu_bground.png');
         width: 100%;
         height: 218px;
-        margin: 0px;
-        text-indent: 420px;
+      }
+      ol {
+        position: absolute;
+        margin: 80px;
+        padding: 10px;
+        white-space: nowrap;
         display: inline;
       }
       ol li {
-        display: inline;
+        margin: 10px;
+        padding: 10px;
+        display: table-cell;
+        vertical-align: middle;
       }
       ol li a {
         color: rgb(255,255,255);
@@ -28,6 +39,10 @@
         font-weight: bold;
         padding: 20px;
       }
+      #pv_video {
+        clear: both;
+        text-align: center;
+      }
       body {
         background-image: url('https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/bground.jpg');
         background-repeat: repeat;
@@ -36,21 +51,21 @@
     </style>
   </head>
   <body>
-    <p class="menu">
+    <header>
       <img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/title_logo.png" alt="">
+    </header>
+    <section id="menu">
       <ol>
-        <li><a href="#">기본 정보</a></li>
-        <li><a href="#">전술인형</a></li>
-        <li><a href="#">장비</a></li>
-        <li><a href="#">요정</a></li>
-        <li><a href="#">인형제조/장비제조</a></li>
+        <li><a href="https://dlsgk147.github.io/src/info.html">기본 정보</a></li>
+        <li><a href="https://dlsgk147.github.io/src/tdoll.html">전술인형</a></li>
+        <li><a href="https://dlsgk147.github.io/src/equip.html">장비</a></li>
+        <li><a href="https://dlsgk147.github.io/src/fairy.html">요정</a></li>
+        <li><a href="https://dlsgk147.github.io/src/hoc.html">중장비부대</a></li>
+        <li><a href="https://dlsgk147.github.io/src/manufacture.html">인형제조/장비제조</a></li>
      </ol>
-    </p>
-    <div style="width: 50%">
+    </section>
+    <div id="pv_video">
       <iframe width="640" height="480" src="https://www.youtube.com/embed/dq2JL_IVw0U" ></iframe>
-    </div>
-    <div>
-      <a href="https://github.com/dlsgk147/dlsgk147.github.io/blob/master/src/home.html">홈으로 이동</a>
     </div>
   </body>
 </html>
