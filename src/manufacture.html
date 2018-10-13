@@ -1,1 +1,1537 @@
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>인형제조/중형제조</title>
+    <link type="text/css" rel="stylesheet" href="basic.css">
+    <link type="text/css" rel="stylesheet" href="frame.css">
+    <style>
+      table {
+        position: relative;
+        margin: 10px auto 10px auto;
+      }
+      th[class="in_cell"] {
+        background-color: rgb(112,112,112);
+      }
+      td.general {
+        background-color: rgb(205,203,201);
+      }
+      td.rare {
+        background-color: rgb(182,241,252);
+      }
+      td.epochal {
+        background-color: rgb(202,228,133);
+      }
+      td.legendary {
+        background-color: rgb(254,236,109);
+      }
+      caption {
+        caption-side: top;
+        padding: 10px;
+      }
+      img {
+        margin: 0px auto 0px auto;
+        display: block;
+      }
+      sup {
+        font-size: 7pt;
+        color: rgb(0,0,0);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="https://dlsgk147.github.io/index.html"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/title_logo.png" alt=""></a>
+    </header>
+    <section id="menu">
+      <ol>
+        <li><a href="https://dlsgk147.github.io/src/info.html">기본 정보</a></li>
+        <li><a href="https://dlsgk147.github.io/src/tdoll.html">전술인형</a></li>
+        <li><a href="https://dlsgk147.github.io/src/equip.html">장비</a></li>
+        <li><a href="https://dlsgk147.github.io/src/fairy.html">요정</a></li>
+        <li><a href="https://dlsgk147.github.io/src/hoc.html">중장비부대</a></li>
+        <li><a href="https://dlsgk147.github.io/src/manufacture.html">인형제조/장비제조</a></li>
+     </ol>
+    </section>
+    <div id="index">
+      목차
+      <ol class="list" style="list-style-type: none;">
+        <li><a href="#doll">1</a>. 인형 제조</li>
+          <ol class="sublist">
+            <li>등장조건</li>
+            <li>제조식</li>
+            <li>시간표</li>
+          </ol>
+        <li><a href="#equip">2</a>. 장비 제조</li>
+          <ol class="sublist">
+            <li>등장조건</li>
+            <li>제조식</li>
+            <li>시간표</li>
+          </ol>
+      </ol>
+    </div>
+    <div class="menu">
+      <h1 id="doll"><a href="#index" style="font-size: 20pt;">1</a>. 인형제조</h1>
+      <hr>
+      <p>
+        인형제조는 인형제조계약을 하나 소모하고 각각의 자원을 30~999까지 투자하여 인형을 제조하는 기능이다. 총기별로 필요한 최소 자원의 양이 다르다. 또한 인형마다 제조 시간이 정해져 있으므로 제조 시간을 통해 해당 인형이 무엇인지 예측할 수 있다. </br>
+        중형제조는 30개의 서로 다른 전역을 클리어해야 한다. 자원을 1000~9999까지 투자할 수 있으며 인형제조계약과 코어를 소모한다. 중형제조 형식에 따라 더 많은 인형제조계약과 코어를 소모하며 높은 레어도의 인형이 등장할 확률이 증가한다. 제조계약과 코어를 각각 50장, 10개 소모하는 3형의 경우 무조건 4성 이상의 인형이 등장한다. 산탄총은 중형제조에서만 등장하며 대신 권총은 등장하지 않는다. AR의 최소조건이 SMG와 같이 무조건으로 바뀌며 이외의 조건들은 일반 제조에서의 조건에서 10배의 자원을 요구한다. 또한 중형제조에서는 2성이 등장하지 않는다. 그렇기 때문에 중형제조에서만 얻을 수 있는 샷건은 2성이 존재하지 않는다. </br>
+        일반적으로는 원하는 인형을 얻기 위해서 다른 병종을 배제할 수 있는 특정 제조식을 사용하게 된다. 제조식을 베이스로 자신의 미신(?)에 따라 자원을 조금씩 바꿔서 제조를 하게 된다.
+      </p>
+      <table>
+        <tr>
+          <th>제조 형식</th>
+          <th>★★★</th>
+          <th>★★★★</th>
+          <th>★★★★★</th>
+        </tr>
+        <tr>
+          <td>중형1식(계약x1, 코어x3)</td>
+          <td>40%</td>
+          <td>45%</td>
+          <td>15%</td>
+        </tr>
+        <tr>
+          <td>중형2식(계약x20 코어x5)</td>
+          <td>20%</td>
+          <td>60%</td>
+          <td>20%</td>
+        </tr>
+        <tr>
+          <td>중형3식(계약x50, 코어x10)</td>
+          <td>-</td>
+          <td>75%</td>
+          <td>25%</td>
+        </tr>
+      </table>
+      <h2>1.1. 등장조건(인력/탄약/식량/부품)</h2>
+      <table>
+        <caption>일반 제조</caption>
+        <tr>
+          <th>종류</th>
+          <th colspan="2">최소조건</th>
+          <th colspan="2">추가조건</th>
+        </tr>
+        <tr>
+          <td>
+            <img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/hg.png" alt="HG">
+          </td>
+          <td>자원 총합 920 이하</td>
+          <td>
+            ★5 그리즐리 Mk Ⅴ, NZ75, Px4 스톰</br>
+            ★4 콜트 리볼버, Mk23</br>
+            ★3 이하 모든 인형
+          </td>
+          <td>
+            130/130/130/- 이상
+          </td>
+          <td>
+            ★5, ★4 좌측 제외 모든 인형</br>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/smg.png" alt="SMG">
+          </td>
+          <td>조건 없음</td>
+          <td>
+            ★5 톰슨</br>
+            ★4 MP5</br>
+            ★3 이하 우측 제외 모든 인형
+          </td>
+          <td>
+            400/400/-/- 이상
+          </td>
+          <td>
+            ★5, ★4 좌측 제외 모든 인형</br>
+            ★3 스텐 Mk.Ⅱ
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/ar.png" alt="AR">
+          </td>
+          <td>자원 총합 800 이상</td>
+          <td>
+            ★5 G11, HK416</br>
+            ★4 우측 제외 모든 인형</br>
+            ★3 이하 모든 인형
+          </td>
+          <td>
+            -/400/400/- 이상
+          </td>
+          <td>
+            ★5 좌측 제외 모든 인형</br>
+            ★4 TAR-21, G36, 리베롤
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/rf.png" alt="RF">
+          </td>
+          <td>300/-/300/- 이상</td>
+          <td>
+            ★5 NTW-20, WA2000, 카르카노 M1891</br>
+            ★4 우측 제외 모든 인형</br>
+            ★3 이하 우측 제외 모든 인형
+          </td>
+          <td>
+            400/-/400/- 이상
+          </td>
+          <td>
+            ★5 좌측 제외 모든 인형</br>
+            ★4 SVD, T-5000
+            ★3 한양조 88식
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/mg.png" alt="MG">
+          </td>
+          <td>400/600/-/300 이상</td>
+          <td>
+            ★5 MG5</br>
+            ★4 우측 제외 모든 인형</br>
+            ★3 이하 모든 인형
+          </td>
+          <td>
+            600/600/100/400 이상
+          </td>
+          <td>
+            ★5 좌측 제외 모든 인형</br>
+            ★4 PK
+          </td>
+        </tr>
+      </table>
+      <table>
+        <caption>중형 제조</caption>
+        <tr>
+          <th>종류</th>
+          <th colspan="2">최소조건</th>
+          <th colspan="2">추가조건</th>
+        </tr>
+        <tr>
+          <td>
+            <img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/smg.png" alt="SMG">
+          </td>
+          <td>조건 없음</td>
+          <td>
+            ★5 톰슨</br>
+            ★4 MP5</br>
+            ★3 우측 제외 모든 인형
+          </td>
+          <td>
+            4000/4000/-/- 이상
+          </td>
+          <td>
+            ★5, ★4 좌측 제외 모든 인형</br>
+            ★3 스텐 Mk.Ⅱ
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/ar.png" alt="AR">
+          </td>
+          <td>조건 없음</td>
+          <td>
+            ★5 G11, HK416</br>
+            ★4 우측 제외 모든 인형</br>
+            ★3 모든 인형
+          </td>
+          <td>
+            -/4000/4000/- 이상
+          </td>
+          <td>
+            ★5 좌측 제외 모든 인형</br>
+            ★4 TAR-21, G36, 리베롤
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/rf.png" alt="RF">
+          </td>
+          <td>3000/-/3000/- 이상</td>
+          <td>
+            ★5 NTW-20, WA2000, 카르카노 M1891</br>
+            ★4 우측 제외 모든 인형</br>
+            ★3 우측 제외 모든 인형
+          </td>
+          <td>
+            4000/-/4000/- 이상
+          </td>
+          <td>
+            ★5 좌측 제외 모든 인형</br>
+            ★4 SVD, T-5000
+            ★3 한양조 88식
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/mg.png" alt="MG">
+          </td>
+          <td>4000/6000/-/3000 이상</td>
+          <td>
+            ★5 MG5</br>
+            ★4 우측 제외 모든 인형</br>
+            ★3 모든 인형
+          </td>
+          <td>
+            6000/6000/1000/4000 이상
+          </td>
+          <td>
+            ★5 좌측 제외 모든 인형</br>
+            ★4 PK
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/sg.png" alt="SG">
+          </td>
+          <td>4000/-/6000/3000 이상</td>
+          <td>
+            ★5 KSG</br>
+            ★4 우측 제외 모든 인형</br>
+            ★3 우측 제외 모든 인형
+          </td>
+          <td>
+            6000/-/6000/4000 이상
+          </td>
+          <td>
+            ★5 좌측 제외 모든 인형</br>
+            ★4 M37, Super Shorty</br>
+            ★3 RMB-93, M1897
+          </td>
+        </tr>
+      </table>
+      <h2>1.2. 제조식</h2>
+      <table>
+      <caption>일반 제조</caption>
+        <tr>
+          <th>종류</th>
+          <th>
+            제조식</br>
+            인력 / 탄약 / 식량 / 부품
+          </th>
+          <th>설명</th>
+        </tr>
+        <tr>
+          <td>범용식1</td>
+          <td>430 / 430 / 430 / 230</td>
+          <td>
+            HG와 MG를 제외한 모든 총기가 등장한다. </br>
+            초반에 모든 총기가 부족할 때 많이 사용하는 식이다. 
+          </td>
+        </tr>
+        <tr>
+          <td>범용식2</td>
+          <td>630 / 630 / 430 / 430</td>
+          <td>
+            범용식을 변형하여 MG도 등장하도록 바꾼 식
+          </td>
+        </tr>
+        <tr>
+          <td>HG 저격식</td>
+          <td>130 / 130 / 130 / 130</td>
+          <td>
+            모든 HG이 등장 가능한 저격식
+          </td>
+        </tr>
+        <tr>
+          <td>SMG 저격식</td>
+          <td>430 / 430 / 130 / 230</td>
+          <td>
+            식량을 줄여 RF를 배제하고 5성 SMG 조건을 맞춘 저격식
+          </td>
+        </tr>
+        <tr>
+          <td>AR 저격식</td>
+          <td>95 / 400 / 400 / 95</td>
+          <td>
+            5성 AR의 최소 조건만 맞춰 인력, 부품을 아끼는 AR 저격식
+          </td>
+        </tr>
+        <tr>
+          <td>G11 저격식</td>
+          <td>999 / 30 / 30 / 30</td>
+          <td>
+            G11은 최소식으로도 등장하므로</br>
+            보통 가장 많이 남는 자원인 인력만 최대로 넣어</br>
+            자원을 아끼면서 G11을 노리는 저격식</br>
+            HK416도 저격 가능하지만 일반 AR식에서도 매우 잘 나온다.</br>
+          </td>
+        </tr>
+        <tr>
+          <td>RF 저격식</td>
+          <td>430 / 130 / 430 / 230</td>
+          <td>
+            탄약을 줄여 AR, MG를 배제한 저격식
+          </td>
+        </tr>
+        <tr>
+          <td>MG 저격식</td>
+          <td>730 / 630 / 130 / 430</td>
+          <td>
+            식량을 줄여 RF를 배제한 저격식</br>
+            그러나 5성 SMG의 조건도 만족하므로</br>
+            고오급 SMG식으로도 불린다</br>
+          </td>
+        </tr>
+      </table>
+      <table>
+      <caption>중형 제조</caption>
+        <tr>
+          <th>종류</th>
+          <th>
+            제조식</br>
+            인력 / 탄약 / 식량 / 부품
+          </th>
+          <th>설명</th>
+        </tr>
+        <tr>
+          <td>범용식</td>
+          <td>6000 / 6000 / 6000 / 4000</td>
+          <td>
+            중형제조에서 나오는 모든 총기가 등장 가능하다.  </br>
+            샷건보다는 고레어도의 다른 병종을 노리고 사용한다.
+          </td>
+        </tr>
+        <tr>
+          <td>G11</td>
+          <td>1000 / 1000 / 1000 / 1000</td>
+          <td>
+            G11은 어떤 제조식에서도 등장하므로 최소식만 맞춘 저격식 </br>
+            또는 10회 중제조의 보상인 97식 산탄총을 노리고</br>
+            이 식을 10번 돌리는 경우도 있다. 
+          </td>
+        </tr>
+        <tr>
+          <td>SG 저격식</td>
+          <td>6000 / 2000 / 6000 / 4000</td>
+          <td>
+            모든 산탄총이 등장 가능한 최소식. </br>
+            일반적으로 가장 많이 돌리는 제조식이다. </br>
+          </td>
+        </tr>
+      </table>
+      <h2>1.3. 시간표</h2>
+      <table>
+        <tr>
+          <th>제조 시간(시간)</th>
+          <th>등급</th>
+          <th>종류</th>
+          <th>등장 인형</th>
+        </tr>
+        <tr>
+          <td>00:20</td>
+          <td class="general" rowspan="4"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/general.png" alt="GENERAL"</td>
+          <td rowspan="17"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/hg.png" alt="HG"></td>
+          <td>M1911 · 나강 리볼버 · P38</td>
+        </tr>
+        <tr>
+          <td>00:22</td>
+          <td>PPK</td>
+        </tr>
+        <tr>
+          <td>00:25</td>
+          <td>FNP-9 · MP-446</td>
+        </tr>
+        <tr>
+          <td>00:28</td>
+          <td>USP Compact · Bren Ten</td>
+        </tr>
+        <tr>
+          <td>00:30</td>
+          <td class="rare" rowspan="4"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/rare.png" alt="RARE"></td>
+          <td>P08 · C96</td>
+        </tr>
+        <tr>
+          <td>00:35</td>
+          <td>92식 · P99</td>
+        </tr>
+        <tr>
+          <td>00:40</td>
+          <td>아스트라 리볼버 · M9 · 마카로프</td>
+        </tr>
+        <tr>
+          <td>00:45</td>
+          <td>토카레프</td>
+        </tr>
+        <tr>
+          <td>00:50</td>
+          <td class="epochal" rowspan="4"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/epochal.png" alt="EPOCHAL"></td>
+          <td>콜트 리볼버 · Mk23</td>
+        </tr>
+        <tr>
+          <td>00:52</td>
+          <td>Spitfire</td>
+        </tr>
+        <tr>
+          <td>00:53</td>
+          <td>K5</td>
+        </tr>
+        <tr>
+          <td>00:55</td>
+          <td>P7 · 스테츠킨</td>
+        </tr>
+        <tr>
+          <td>01:00</td>
+          <td class="legendary" rowspan="5"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/legendary.png" alt="LEGENDARY"></td>
+          <td>웰로드 Mk Ⅱ</td>
+        </tr>
+        <tr>
+          <td>01:02</td>
+          <td>컨텐더</td>
+        </tr>
+        <tr>
+          <td>01:04</td>
+          <td>Px4 스톰</td>
+        </tr>
+        <tr>
+          <td>01:05</td>
+          <td>M950A · NZ75</td>
+        </tr>
+        <tr>
+          <td rowspan="2">01:10</td>
+          <td>그리즐리 Mk Ⅴ</td>
+        </tr>
+        <tr>
+          <td class="general" rowspan="4"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/general.png" alt="GENERAL"></td>
+          <td rowspan="19"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/smg.png" alt="SMG"></td>
+          <td>IDW · PP-2000</td>
+        </tr>
+        <tr>
+          <td>01:20</td>
+          <td>Spectre M4 · M45</td>
+        </tr>
+        <tr>
+          <td>01:25</td>
+          <td>64식</td>
+        </tr>
+        <tr>
+          <td>01:30</td>
+          <td>MP40 · 베레타 38형 · M3</td>
+        </tr>
+        <tr>
+          <td>01:40</td>
+          <td class="rare" rowspan="2"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/rare.png" alt="RARE"></td>
+          <td>스텐 Mk Ⅱ · 마이크로 우지</td>
+        </tr>
+        <tr>
+          <td rowspan="2">01:50</td>
+          <td>F1<sup>중형</sup></td>
+        </tr>
+        <tr>
+          <td class="general"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/general.png" alt="GENERAL"></td>
+          <td>PPSh-41</td>
+        </tr>
+        <tr>
+          <td>02:00</td>
+          <td class="rare" rowspan="4"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/rare.png" alt="RARE"></td>
+          <td>MAC-10 · 스콜피온</td>
+        <tr>
+        <tr>
+          <td>02:05</td>
+          <td>Z-62<sup>중형</sup></td>
+        </tr>
+        <tr>
+          <td>02:10</td>
+          <td>PPS-43</td>
+        </tr>
+        <tr>
+          <td>02:15</td>
+          <td class="epochal" rowspan="3"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/epochal.png" alt="EPOCHAL"></td>
+          <td>UMP9 · UMP45</td>
+        </tr>
+        <tr>
+          <td>02:18</td>
+          <td>시프카 · PP-19-01</td>
+        </tr>
+        <tr>
+          <td>02:20</td>
+          <td>MP5 · PP-90</td>
+        </tr>
+        <tr>
+          <td>02:25</td>
+          <td class="legendary" rowspan="5"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/legendary.png" alt="LEGENDARY"></td>
+          <td>수오미</td>
+        </tr>
+        <tr>
+          <td>02:28</td>
+          <td>C-MS</td>
+        </tr>
+        <tr>
+          <td>02:30</td>
+          <td>톰슨 · G36C</td>
+        </tr>
+        <tr>
+          <td>02:33</td>
+          <td>SR-3MP</td>
+        </tr>
+        <tr>
+          <td>02:35</td>
+          <td>Vector · 79식</td>
+        </tr>
+        <tr>
+          <td>02:40</td>
+          <td class="general" rowspan="3"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/general.png" alt="GENERAL"></td>
+          <td rowspan="5"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/ar.png" alt="AR"></td>
+          <td>갈릴 · SIG-510</td>
+        </tr>
+        <tr>
+          <td>02:45</td>
+          <td>F2000 · 63식</td>
+        </tr>
+        <tr>
+          <td>02:50</td>
+          <td>L85A1 · G3</td>
+        </tr>
+        <tr>
+          <td>03:00</td>
+          <td class="rare" rowspan="2"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/rare.png" alt="RARE"></td>
+          <td>StG44</td>
+        </tr>
+        <tr>
+          <td rowspan="2">03:10</td>
+          <td>OTs-12</td>
+        </tr>
+        <tr>
+          <td class="general"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/general.png" alt="GENERAL"></td>
+          <td><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/rf.png" alt="RF"></td>
+          <td>BM59</td>
+        </tr>
+        <tr>
+          <td>03:25</td>
+          <td class="epochal" rowspan="2"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/epochal.png" alt="EPOCHAL"></td>
+          <td rowspan="2"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/ar.png" alt="AR"></td>
+          <td>56-1식 · XM8 · SAR-21</td>
+        </tr>
+        <tr>
+          <td rowspan="2">03:30</td>
+          <td>AS Val · FAMAS · TAR-21</td>
+        </tr>
+        <tr>
+          <td class="general"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/general.png" alt="GENERAL"></td>
+          <td><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/rf.png" alt="RF"></td>
+          <td>시모노프 · SVT-38</td>
+        </tr>
+        <tr>
+          <td>03:35</td>
+          <td class="epochal" rowspan="2"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/epochal.png" alt="EPOCHAL"></td>
+          <td rowspan="2"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/ar.png" alt="AR"></td>
+          <td>9A-91</td>
+        </tr>
+        <tr>
+          <td rowspan="2">03:40</td>
+          <td>G36 · 리베롤</td>
+        </tr>
+        <tr>
+          <td class="rare"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/rare.png" alt="RARE"></td>
+          <td><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/rf.png" alt="RF"></td>
+          <td>M14 · SV-98</td>
+        </tr>
+        <tr>
+          <td>03:45</td>
+          <td class="legendary" rowspan="3"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/legendary.png" alt="LEGENDARY"></td>
+          <td rowspan="3"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/ar.png" alt="AR"></td>
+          <td>FAL</td>
+        </tr>
+        <tr>
+          <td>03:48</td>
+          <td>T91</td>
+        </tr>
+        <tr>
+          <td rowspan="2">03:50</td>
+          <td>95식 · 97식</td>
+        </tr>
+        <tr>
+          <td class="rare"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/rare.png" alt="RARE"></td>
+          <td><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/rf.png" alt="RF"></td>
+          <td>한양조 88식 · OTs-44<sup>중형</sup></td>
+        </tr>
+        <tr>
+          <td>03:52</td>
+          <td class="legendary" rowspan="4"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/legendary.png" alt="LEGENDARY"></td>
+          <td rowspan="4"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/ar.png" alt="AR"></td>
+          <td>K2</td>
+        </tr>
+        <tr>
+          <td>03:53</td>
+          <td>MDR</td>
+        </tr>
+        <tr>
+          <td>03:55</td>
+          <td>HK416</td>
+        </tr>
+        <tr>
+          <td>03:58</td>
+          <td>RFB</td>
+        </tr>
+        <tr>
+          <td>04:00</td>
+          <td class="rare"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/rare.png" alt="RARE"></td>
+          <td><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/rf.png" alt="RF"></td>
+          <td>M1 개런드</td>
+        </tr>
+        <tr>
+          <td>04:04</td>
+          <td class="legendary" rowspan="3"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/legendary.png" alt="LEGENDARY"></td>
+          <td rowspan="3"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/ar.png" alt="AR"></td>
+          <td>G11</td>
+        </tr>
+        <tr>
+          <td>04:05</td>
+          <td>G41 · Zas M21</td>
+        </tr>
+        <tr>
+          <td>04:09</td>
+          <td>AN-94</td>
+        </tr>
+        <tr>
+          <td>04:10</td>
+          <td class="epochal"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/epochal.png" alt="EPOCHAL"></td>
+          <td><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/rf.png" alt="RF"></td>
+          <td>모신나강 · T-5000</td>
+        </tr>
+        <tr>
+          <td>04:11</td>
+          <td class="legendary" rowspan="2"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/legendary.png" alt="LEGENDARY"></td>
+          <td rowspan="2"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/ar.png" alt="AR"></td>
+          <td>K11</td>
+        </tr>
+        <tr>
+          <td>04:12</td>
+          <td>AK-12</td>
+        </tr>
+        <tr>
+          <td>04:15</td>
+          <td class="epochal" rowspan="4"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/epochal.png" alt="EPOCHAL"></td>
+          <td rowspan="9"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/rf.png" alt="RF"></td>
+          <td>SVD · SPR A3G</td>
+        </tr>
+        <tr>
+          <td>04:20</td>
+          <td>PSG-1<sup>중형</sup> · G28<sup>중형</sup></td>
+        </tr>
+        <tr>
+          <td>04:25</td>
+          <td>스프링필드</td>
+        </tr>
+        <tr>
+          <td>04:30</td>
+          <td>PTRD · PzB39<sup>중형</sup></td>
+        </tr>
+        <tr>
+          <td>04:38</td>
+          <td class="legendary" rowspan="5"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/legendary.png" alt="LEGENDARY"></td>
+          <td>카르카노 M1891</td>
+        </tr>
+        <tr>
+          <td>04:40</td>
+          <td>Kar98K</td>
+        </tr>
+        <tr>
+          <td>04:42</td>
+          <td>카르카노 M91/38</td>
+        </tr>
+        <tr>
+          <td>04:45</td>
+          <td>NTW-20</td>
+        </tr>
+        <tr>
+          <td rowspan="2">04:50</td>
+          <td>WA2000</td>
+        </tr>
+        <tr>
+          <td class="general"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/general.png" alt="GENERAL"></td>
+          <td><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/mg.png" alt="MG"></td>
+          <td>AAT-52 · FG42</td>
+        </tr>
+        <tr>
+          <td>04:52</td>
+          <td class="legendary" rowspan="3"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/legendary.png" alt="LEGENDARY"></td>
+          <td rowspan="3"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/rf.png" alt="RF"></td>
+          <td>IWS 2000</td>
+        </tr>
+        <tr>
+          <td>04:55</td>
+          <td>M99</td>
+        </tr>
+        <tr>
+          <td rowspan="2">05:00</td>
+          <td>리엔필드</td>
+        </tr>
+        <tr>
+          <td class="general" rowspan="2"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/general.png" alt="GENERAL"></td>
+          <td rowspan="2"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/mg.png" alt="MG"></td>
+          <td>MG34 · DP28</td>
+        </tr>
+        <tr>
+          <td>05:10</td>
+          <td>LWMMG</td>
+        </tr>
+        <tr>
+          <td>05:20</td>
+          <td class="rare" rowspan="4"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/rare.png" alt="RARE"></td>
+          <td rowspan="4"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/mg.png" alt="MG"></td>
+          <td>브렌</td>
+        </tr>
+        <tr>
+          <td>05:40</td>
+          <td>M1919A4</td>
+        </tr>
+        <tr>
+          <td>05:50</td>
+          <td>MG42</td>
+        </tr>
+        <tr>
+          <td rowspan="2">06:10</td>
+          <td>M2HB</td>
+        </tr>
+        <tr>
+          <td class="epochal" rowspan="4"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/epochal.png" alt="EPOCHAL"></td>
+          <td rowspan="4"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/mg.png" alt="MG"></td>
+          <td>M60</td>
+        </tr>
+        <tr>
+          <td>06:15</td>
+          <td>80식</td>
+        </tr>
+        <tr>
+          <td>06:20</td>
+          <td>Mk48 · AEK-999</td>
+        </tr>
+        <tr>
+          <td>06:25</td>
+          <td>M1918 · 아멜리</td>
+        </tr>
+        <tr>
+          <td>06:28</td>
+          <td class="legendary"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/legendary.png" alt="LEGENDARY"></td>
+          <td><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/mg.png" alt="MG"></td>
+          <td>88식</td>
+        </tr>
+        <tr>
+          <td>06:30</td>
+          <td class="epochal"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/epochal.png" alt="EPOCHAL"></td>
+          <td><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/mg.png" alt="MG"></td>
+          <td>PK · MG3</td>
+        </tr>
+        <tr>
+          <td>06:35</td>
+          <td class="legendary" rowspan="4"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/legendary.png" alt="LEGENDARY"></td>
+          <td rowspan="4"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/mg.png" alt="MG"></td>
+          <td>네게브</td>
+        </tr>
+        <tr>
+          <td>06:40</td>
+          <td>MG4</td>
+        </tr>
+        <tr>
+          <td>06:45</td>
+          <td>MG5</td>
+        </tr>
+        <tr>
+          <td>06:50</td>
+          <td>PKP</td>
+        </tr>
+        <tr>
+          <td>07:14</td>
+          <td class="epochal"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/epochal.png" alt="EPOCHAL"></td>
+          <td><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/sg.png" alt="SG"></td>
+          <td>M1014</td>
+        </tr>
+        <tr>
+          <td>07:15</td>
+          <td class="rare" rowspan="4"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/rare.png" alt="RARE"></td>
+          <td rowspan="4"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/sg.png" alt="SG"></td>
+          <td>NS2000</td>
+        </tr>
+        <tr>
+          <td>07:20</td>
+          <td>M500</td>
+        </tr>
+        <tr>
+          <td>07:25</td>
+          <td>KS-23</td>
+        </tr>
+        <tr>
+          <td>07:30</td>
+          <td>RMB-93 · M1897</td>
+        </tr>
+        <tr>
+          <td>07:40</td>
+          <td class="epochal" rowspan="4"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/epochal.png" alt="EPOCHAL"></td>
+          <td rowspan="4"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/sg.png" alt="SG"></td>
+          <td>M590 · SPAS-12</td>
+        </tr>
+        <tr>
+          <td>07:45</td>
+          <td>M37</td>
+        </tr>
+        <tr>
+          <td>07:50</td>
+          <td>Super-Shorty</td>
+        </tr>
+        <tr>
+          <td>07:55</td>
+          <td>USAS-12</td>
+        </tr>
+        <tr>
+          <td>08:00</td>
+          <td class="legendary" rowspan="5"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/legendary.png" alt="LEGENDARY"></td>
+          <td rowspan="5"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/tdolls/sg.png" alt="SG"></td>
+          <td>KSG</td>
+        </tr>
+        <tr>
+          <td>08:05</td>
+          <td>Saiga-12</td>
+        </tr>
+        <tr>
+          <td>08:06/td>
+          <td>FP-6</td>
+        </tr>
+        <tr>
+          <td>08:10</td>
+          <td>S.A.T.8</td>
+        </tr>
+        <tr>
+          <td>08:12</td>
+          <td>AA-12</td>
+        </tr>
+      </table>
+      <h1 id="equip"><a href="#index" style="font-size: 20pt;">2</a>. 장비제조</h1>
+      <hr>
+      <p>
+        장비제조는 인형제조와 비슷하게 장비제조계약을 1개 소모하며 자원은 각각 10~300까지 투입 가능하다. 장비 별 등장 조건 역시 존재하므로 장비도 저격식이 존재한다. </br>
+        중형장비제조는 60개의 서로 다른 전역을 클리어하면 개방된다. 자원은 각각 500~5000까지 투입 가능하다. 역시 제조계약과 코어의 수에 따라 제조 형식이 나누어져 있다. 장비의 경우 2형부터 3성 장비가 등장하지 않는다. 요정은 중형장비제조에서만 존재하며 요정 역시 종류에 따라 최소 조건이 다르다. 
+      </p>
+      <table>
+        <tr>
+          <th>제조 형식</th>
+          <th>★★★</th>
+          <th>★★★★</th>
+          <th>★★★★★</th>
+          <th>요정</th>
+        </tr>
+        <tr>
+          <td>중형1식(계약x1, 코어x2)</td>
+          <td>40%</td>
+          <td>22%</td>
+          <td>11%</td>
+          <td>27%</td>
+        </tr>
+        <tr>
+          <td>중형2식(계약x20 코어x5)</td>
+          <td>-</td>
+          <td>45%</td>
+          <td>18%</td>
+          <td>37%</td>
+        </tr>
+        <tr>
+          <td>중형3식(계약x50, 코어x10)</td>
+          <td>-</td>
+          <td>27%</td>
+          <td>26%</td>
+          <td>47%</td>
+        </tr>
+      </table>
+      <h2>2.1. 등장조건</h2>
+      <table>
+        <caption>일반 장비</caption>
+        <tr>
+          <th>종류</th>
+          <th>★4 조건</th>
+          <th>★5 조건</th>
+        </tr>
+        <tr>
+          <td>사이트류</td>
+          <td>탄약 150 이하, 부품 150 이하(★5 동일)</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>야시장비</td>
+          <td>조건 없음</td>
+          <td>인력 50 이상, 식량 100 이상</td>
+        </tr>
+        <tr>
+          <td>소음기</td>
+          <td>조건 없음</td>
+          <td>인력 50 이상</td>
+        </tr>
+        <tr>
+          <td>소음기</td>
+          <td>조건 없음</td>
+          <td>인력 50 이상</td>
+        </tr>
+        <tr>
+          <td>탄약류</td>
+          <td>탄약 100 이상</td>
+          <td>탄약 150 이상, 부품 50 이상</td>
+        </tr>
+        <tr>
+          <td>외골격</td>
+          <td>조건 없음</td>
+          <td>인력 50 이상, 부품 50 이상</td>
+        </tr>
+        <tr>
+          <td>방탄판</td>
+          <td>조건 없음</td>
+          <td>식량 50 이상, 부품 50 이상</td>
+        </tr>
+        <tr>
+          <td>탄통</td>
+          <td>부품 150 이상(★5 동일)</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>슈트</td>
+          <td>조건 없음</td>
+          <td>인력 100 이상, 식량 100 이상</td>
+        </tr>
+      </table>
+      <h2>2.2. 제조식</h2>
+      <table>
+        <caption>일반 장비 제조식</caption>
+        <tr>
+          <th>종류</th>
+          <th>
+            제조식</br>
+            인력 / 탄약 / 식량 / 부품
+          </th>
+          <th>설명</th>
+        </tr>
+        <tr>
+          <td>범용식</td>
+          <td>150 / 150 / 150 / 150</td>
+          <td>
+            모든 장비가 등장하는 일반적인 저격식</br>
+            가장 많이 돌리게 되는 제조식이다. </br>
+          </td>
+        </tr>
+        <tr>
+          <td>사이트류 제외 범용식</td>
+          <td>151 / 151 / 151 / 151</td>
+          <td>
+            사이트류 조건이 탄약, 부품 150 이하이므로</br>
+            사이트류를 제외한 모든 장비가 등장한다.  </br>
+          </td>
+        </tr>
+        <tr>
+          <td>범용식 2</td>
+          <td>210 / 210 / 210 / 210</td>
+          <td>
+            자원을 좀 더 투자하여</br>
+            고레어 장비를 노리는 저격식</br>
+          </td>
+        </tr>
+        <tr>
+          <td>범용 최소식</td>
+          <td>100 / 150 / 100 / 150</td>
+          <td>
+            모든 장비가 나올 수 있는 최소식</br>
+            보통은 탄약, 부품이 없는 경우가 많으니</br>
+            인력, 식량이 많이 없으면 돌려보자
+          </td>
+        </tr>
+        <tr>
+          <td>탄약류</td>
+          <td>50 / 250 / 150 / 100</td>
+          <td>
+            일반적인 식에서 탄약 비중을 높여</br>
+            탄환류, 특히 갓속탄이라 불리는</br>
+            5성 고속탄을 노리기 위한 저격식
+          </td>
+        </tr>
+        <tr>
+          <td>사이트류 저격식</td>
+          <td>10 / 10 / 10 / 10</td>
+          <td>
+            다른 5성 장비는 나오지 않는</br>
+            고레어 사이트류를 노리기 위한 저격식</br>
+            자원을 가장 적게 사용할 수 있다. 
+          </td>
+        </tr>
+      </table>
+      <table>
+        <caption>요정 저격식</caption>
+        <tr>
+          <th>종류</th>
+          <th>
+            제조식</br>
+            인력 / 탄약 / 식량 / 부품
+          </th>
+          <th>설명</th>
+        </tr>
+        <tr>
+          <td>최소식</td>
+          <td>500 / 500 / 500 / 500</td>
+          <td>
+            중형 장비제조의 최소식이자</br>
+            요정을 뽑을 수 있는 최소식</br>
+            용사 · 격노 · 방패 · 수호</br>
+            도발 · 저격 · 포격 · 공습</br>
+            지휘 · 수색 · 조명요정이 등장한다. </br>
+          </td>
+        </tr>
+        <tr>
+          <td>저격식 1</td>
+          <td>2000 / 500 / 2000 / 1000</td>
+          <td>
+            최소식에서 방어 · 증원 · 공수요정이 추가로 등장한다. </br>
+            보통 공수요정을 위해 돌리고</br>
+            그 외에는 증원요정을 노리게 된다</br>
+          </td>
+        </tr>
+        <tr>
+          <td>저격식 2</td>
+          <td>500 / 2000 / 2000 / 1000</td>
+          <td>
+            최소식에서 매설 · 로켓 · 공사요정이 추가로 등장한다. </br>
+            3개 다 쓰임새가 애매해서</br>
+            도감 채우고 싶으면 돌린다</br>
+          </td>
+        </tr>
+        <tr>
+          <td>범용식</td>
+          <td>2000 / 2000 / 2000 / 1000</td>
+          <td>
+            모든 요정이 등장하는 범용식 </br>
+          </td>
+        </tr>
+      </table>
+      <h2>2.3. 시간표</h2>
+      <table>
+        <caption>일반 장비</caption>
+        <tr>
+          <th>제조 시간(분)</th>
+          <th>등급</th>
+          <th>종류</th>
+          <th>장비 명칭</th>
+        </tr>
+        <tr>
+          <td>05:00</td>
+          <td class="general">★★</td>
+          <td>옵티컬</td>
+          <td>BM 3-12X40</td>
+        </tr>
+        <tr>
+          <td>07:00</td>
+          <td class="general">★★</td>
+          <td>소음기</td>
+          <td>AC1 소음기</td>
+        </tr>
+        <tr>
+          <td>08:00</td>
+          <td class="general">★★</td>
+          <td>이오텍</td>
+          <td>EOT 506</td>
+        </tr>
+        <tr>
+          <td>09:00</td>
+          <td class="general">★★</td>
+          <td>야시장비</td>
+          <td>PEQ-1</td>
+        </tr>
+        <tr>
+          <td>10:00</td>
+          <td class="general">★★</td>
+          <td>레드 닷</td>
+          <td>AMP COMPM2</td>
+        </tr>
+        <tr>
+          <td rowspan="2">12:00</td>
+          <td class="general">★★</td>
+          <td>T 외골격</td>
+          <td>IOP T1 외골격</td>
+        </tr>
+        <tr>
+          <td class="general">★★</td>
+          <td>X 외골격</td>
+          <td>IOP X1 외골격</td>
+        </tr>
+        <tr>
+          <td>13:00</td>
+          <td class="general">★★</td>
+          <td>HP탄</td>
+          <td>ILM HP탄</td>
+        </tr>
+        <tr>
+          <td rowspan="2">14:00</td>
+          <td class="general">★★</td>
+          <td>슬러그탄</td>
+          <td>BK 슬러그</td>
+        </tr>
+        <tr>
+          <td class="general">★★</td>
+          <td>벅샷</td>
+          <td>#1 벅샷</td>
+        </tr>
+        <tr>
+          <td>15:00</td>
+          <td class="general">★★</td>
+          <td>철갑탄</td>
+          <td>M61 철갑탄</td>
+        </tr>
+        <tr>
+          <td>16:00</td>
+          <td class="general">★★</td>
+          <td>길리슈트</td>
+          <td>낡은 슈트</td>
+        </tr>
+        <tr>
+          <td>18:00</td>
+          <td class="general">★★</td>
+          <td>고속탄</td>
+          <td>FMJ 고속탄</td>
+        </tr>
+        <tr>
+          <td>20:00</td>
+          <td class="rare">★★★</td>
+          <td>옵티컬</td>
+          <td>LRA 2-12X50</td>
+        </tr>
+        <tr>
+          <td>22:00</td>
+          <td class="rare">★★★</td>
+          <td>소음기</td>
+          <td>AC2 소음기</td>
+        </tr>
+        <tr>
+          <td>23:00</td>
+          <td class="rare">★★★</td>
+          <td>이오텍</td>
+          <td>EOT 512</td>
+        </tr>
+        <tr>
+          <td>24:00</td>
+          <td class="rare">★★★</td>
+          <td>야시장비</td>
+          <td>PEQ-5</td>
+        </tr>
+        <tr>
+          <td>25:00</td>
+          <td class="rare">★★★</td>
+          <td>레드 닷</td>
+          <td>AMP COMPM4</td>
+        </tr>
+        <tr>
+          <td>26:00</td>
+          <td class="rare">★★★</td>
+          <td>방탄판</td>
+          <td>Type1 방탄삽판</td>
+        </tr>
+        <tr>
+          <td rowspan="2">27:00</td>
+          <td class="rare">★★★</td>
+          <td>T 외골격</td>
+          <td>IOP T2 외골격</td>
+        </tr>
+        <tr>
+          <td class="rare">★★★</td>
+          <td>X 외골격</td>
+          <td>IOP X2 외골격</td>
+        </tr>
+        <tr>
+          <td>28:00</td>
+          <td class="rare">★★★</td>
+          <td>HP탄</td>
+          <td>ILM HP탄</td>
+        </tr>
+        <tr>
+          <td rowspan="2">29:00</td>
+          <td class="rare">★★★</td>
+          <td>슬러그탄</td>
+          <td>FST 슬러그</td>
+        </tr>
+        <tr>
+          <td class="rare">★★★</td>
+          <td>벅샷</td>
+          <td>#0 벅샷</td>
+        </tr>
+        <tr>
+          <td>30:00</td>
+          <td class="rare">★★★</td>
+          <td>철갑탄</td>
+          <td>M993 철갑탄</td>
+        </tr>
+        <tr>
+          <td>31:00</td>
+          <td class="rare">★★★</td>
+          <td>길리슈트</td>
+          <td>위장용 슈트</td>
+        </tr>
+        <tr>
+          <td>33:00</td>
+          <td class="rare">★★★</td>
+          <td>고속탄</td>
+          <td>JSP 고속탄</td>
+        </tr>
+        <tr>
+          <td>35:00</td>
+          <td class="epochal">★★★★</td>
+          <td>옵티컬</td>
+          <td>PSO-1</td>
+        </tr>
+        <tr>
+          <td>37:00</td>
+          <td class="epochal">★★★★</td>
+          <td>소음기</td>
+          <td>AC3 소음기</td>
+        </tr>
+        <tr>
+          <td>38:00</td>
+          <td class="epochal">★★★★</td>
+          <td>이오텍</td>
+          <td>EOT 516</td>
+        </tr>
+        <tr>
+          <td>39:00</td>
+          <td class="epochal">★★★★</td>
+          <td>야시장비</td>
+          <td>PEQ-15</td>
+        </tr>
+        <tr>
+          <td>40:00</td>
+          <td class="epochal">★★★★</td>
+          <td>레드닷</td>
+          <td>COG M150</td>
+        </tr>
+        <tr>
+          <td>41:00</td>
+          <td class="epochal">★★★★</td>
+          <td>방탄판</td>
+          <td>Type2 방탄판</td>
+        </tr>
+        <tr>
+          <td rowspan="2">42:00</td>
+          <td class="epochal">★★★★</td>
+          <td>T 외골격</td>
+          <td>IOP T3 외골격</td>
+        </tr>
+        <tr>
+          <td class="epochal">★★★★</td>
+          <td>X 외골격</td>
+          <td>IOP X3 외골격</td>
+        </tr>
+        <tr>
+          <td>43:00</td>
+          <td class="epochal">★★★★</td>
+          <td>HP탄</td>
+          <td>ILM HP탄</td>
+        </tr>
+        <tr>
+          <td rowspan="2">44:00</td>
+          <td class="epochal">★★★★</td>
+          <td>슬러그탄</td>
+          <td>WAD 슬러그</td>
+        </tr>
+        <tr>
+          <td class="epochal">★★★★</td>
+          <td>벅샷</td>
+          <td>#00 벅샷</td>
+        </tr>
+        <tr>
+          <td rowspan="2">45:00</td>
+          <td class="epochal">★★★★</td>
+          <td>철갑탄</td>
+          <td>MK169 철갑탄</td>
+        </tr>
+        <tr>
+          <td class="legendary">★★★★★</td>
+          <td>옵티컬</td>
+          <td>VFL 6-24X56</td>
+        </tr>
+        <tr>
+          <td>46:00</td>
+          <td class="epochal">★★★★</td>
+          <td>길리슈트</td>
+          <td>도시 미채 슈트</td>
+        </tr>
+        <tr>
+          <td rowspan="2">47:00</td>
+          <td class="epochal">★★★★</td>
+          <td>탄통</td>
+          <td>IOP 대용량 탄약상자</td>
+        </tr>
+        <tr>
+          <td class="legendary">★★★★★</td>
+          <td>소음기</td>
+          <td>AC4 소음기</td>
+        </tr>
+        <tr>
+          <td rowspan="2">48:00</td>
+          <td class="epochal">★★★★</td>
+          <td>고속탄</td>
+          <td>JHP 고속탄</td>
+        </tr>
+        <tr>
+          <td class="legendary">★★★★★</td>
+          <td>이오텍</td>
+          <td>EOT 518</td>
+        </tr>
+        <tr>
+          <td>49:00</td>
+          <td class="legendary">★★★★★</td>
+          <td>야시장비</td>
+          <td>PEQ-16A</td>
+        </tr>
+        <tr>
+          <td>50:00</td>
+          <td class="legendary">★★★★★</td>
+          <td>레드닷</td>
+          <td>ITI MARS</td>
+        </tr>
+        <tr>
+          <td>51:00</td>
+          <td class="legendary">★★★★★</td>
+          <td>방탄판</td>
+          <td>Type3 방탄판</td>
+        </tr>
+        <tr>
+          <td rowspan="2">52:00</td>
+          <td class="legendary">★★★★★</td>
+          <td>T 외골격</td>
+          <td>IOP T4 외골격</td>
+        </tr>
+        <tr>
+          <td class="legendary">★★★★★</td>
+          <td>X 외골격</td>
+          <td>IOP X4 외골격</td>
+        </tr>
+        <tr>
+          <td>53:00</td>
+          <td class="legendary">★★★★★</td>
+          <td>HP탄</td>
+          <td>ILM HP탄</td>
+        </tr>
+        <tr>
+          <td rowspan="2">54:00</td>
+          <td class="legendary">★★★★★</td>
+          <td>슬러그탄</td>
+          <td>SABOT 슬러그</td>
+        </tr>
+        <tr>
+          <td class="legendary">★★★★★</td>
+          <td>벅샷</td>
+          <td>#000 벅샷</td>
+        </tr>
+        <tr>
+          <td>55:00</td>
+          <td class="legendary">★★★★★</td>
+          <td>철갑탄</td>
+          <td>Mk211 고폭철갑탄</td>
+        </tr>
+        <tr>
+          <td>56:00</td>
+          <td class="legendary">★★★★★</td>
+          <td>길리슈트</td>
+          <td>열광학 미채 슈트</td>
+        </tr>
+        <tr>
+          <td>57:00</td>
+          <td class="legendary">★★★★★</td>
+          <td>탄통</td>
+          <td>IOP 대용량 탄약통</td>
+        </tr>
+        <tr>
+          <td>58:00</td>
+          <td class="legendary">★★★★★</td>
+          <td>고속탄</td>
+          <td>APCR 고속탄</td>
+        </tr>
+      </table>
+      <table>
+        <caption>요정</caption>
+        <tr>
+          <th>제조 시간(시간)</th>
+          <th>종류</th>
+          <th>명칭</th>
+        </tr>
+        <tr>
+          <td>03:00</td>
+          <td style="color: rgb(242,94,101);">전투</td>
+          <td>방패 요정</td>
+        </tr>
+        <tr>
+          <td>03:05</td>
+          <td style="color: rgb(242,94,101);">전투</td>
+          <td>수호 요정</td>
+        </tr>
+        <tr>
+          <td>03:10</td>
+          <td style="color: rgb(242,94,101);">전투</td>
+          <td>도발 요정</td>
+        </tr>
+        <tr>
+          <td>03:30</td>
+          <td style="color: rgb(242,94,101);">전투</td>
+          <td>저격 요정</td>
+        </tr>
+        <tr>
+          <td>03:35</td>
+          <td style="color: rgb(242,94,101);">전투</td>
+          <td>포격 요정</td>
+        </tr>
+        <tr>
+          <td>03:40</td>
+          <td style="color: rgb(242,94,101);">전투</td>
+          <td>공습 요정</td>
+        </tr>
+        <tr>
+          <td>04:00</td>
+          <td style="color: rgb(74,201,255);">전략</td>
+          <td>증원 요정</td>
+        </tr>
+        <tr>
+          <td>04:05</td>
+          <td style="color: rgb(74,201,255);">전략</td>
+          <td>공수 요정</td>
+        </tr>
+        <tr>
+          <td>04:10</td>
+          <td style="color: rgb(74,201,255);">전략</td>
+          <td>방어 요정</td>
+        </tr>
+        <tr>
+          <td>04:30</td>
+          <td style="color: rgb(242,94,101);">전투</td>
+          <td>용사 요정</td>
+        </tr>
+        <tr>
+          <td>04:35</td>
+          <td style="color: rgb(242,94,101);">전투</td>
+          <td>격노 요정</td>
+        </tr>
+        <tr>
+          <td>05:00</td>
+          <td style="color: rgb(74,201,255);">전략</td>
+          <td>지휘 요정</td>
+        </tr>
+        <tr>
+          <td>05:05</td>
+          <td style="color: rgb(74,201,255);">전략</td>
+          <td>수색 요정</td>
+        </tr>
+        <tr>
+          <td>05:10</td>
+          <td style="color: rgb(74,201,255);">전략</td>
+          <td>조명 요정</td>
+        </tr>
+        <tr>
+          <td>05:30</td>
+          <td style="color: rgb(74,201,255);">전략</td>
+          <td>매설 요정</td>
+        </tr>
+        <tr>
+          <td>05:35</td>
+          <td style="color: rgb(74,201,255);">전략</td>
+          <td>로켓 요정</td>
+        </tr>
+        <tr>
+          <td>05:40</td>
+          <td style="color: rgb(74,201,255);">전략</td>
+          <td>공사 요정</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
