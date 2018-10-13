@@ -1,1 +1,485 @@
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>중장비부대</title>
+    <link type="text/css" rel="stylesheet" href="basic.css">
+    <link type="text/css" rel="stylesheet" href="frame.css">
+    <style>
+      table {
+        position: relative;
+        margin: 10px auto 10px auto;
+      }
+      th[class="in_cell"] {
+        background-color: rgb(112,112,112);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="https://dlsgk147.github.io/index.html"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/title_logo.png" alt=""></a>
+    </header>
+    <section id="menu">
+      <ol>
+        <li><a href="https://dlsgk147.github.io/src/info.html">기본 정보</a></li>
+        <li><a href="https://dlsgk147.github.io/src/tdoll.html">전술인형</a></li>
+        <li><a href="https://dlsgk147.github.io/src/equip.html">장비</a></li>
+        <li><a href="https://dlsgk147.github.io/src/fairy.html">요정</a></li>
+        <li><a href="https://dlsgk147.github.io/src/hoc.html">중장비부대</a></li>
+        <li><a href="https://dlsgk147.github.io/src/manufacture.html">인형제조/장비제조</a></li>
+     </ol>
+    </section>
+    <div id="index">
+      목차
+      <ol class="list" style="list-style-type: none;">
+        <li><a href="#outline">1</a>. 개요</li>
+        <li><a href="#hoc_list">2</a>. 화력 소대 목록</li>
+          <ol class="sublist">
+            <li>ATW: BGM-71</li>
+            <li>AGL: AGS-30</li>
+            <li>MTR: 2B14</li>
+          </ol>
+      </ol>
+    </div>
+    <div class="menu">
+      <h1 id="outline"><a href="#index" style="font-size: 20pt;">1</a>. 개요</h1>
+      <hr>
+      <p>
+        난류연속 이벤트와 함께 추가된 소대. 정식 영어 명칭은 HOC SYSTEM이다. </br>
+        중장비를 해금하기 위해서는 일반 8-6 전역을 해금하면 된다. </br>
+        중장비부대는 대형 헬리포트를 통해서만 배치 및 보급, 긴급수복이 가능하다. 직접 전투는 불가능하며 적 부대와 조우시 바로 퇴각 및 중상 처리된다. 대신 다른 소대가 전투시 지원이 가능하다. 현재 공격을 일부 확률로 도탄시키는 왜곡방벽을 뚫을 수 있는 파쇄력은 화력소대만 가지고 있다. </br>
+        중장비부대를 얻거나 레어도를 높이기 위해서는 각 소대에 해당하는 핵심 데이터가 필요하다. 조각은 숙소 &gt; 부속실 &gt; 정보 센터에서 정보 분석을 통해 획득 가능하다. 정보 분석에서는 중장비부대의 장비인 칩셋 역시 등장한다. </br>
+        칩셋은 1칸부터 6칸까지의 블록으로 되어 있고 이를 부대마다 고유한 회로 안에 맞춰 넣어야 한다. 이 회로는 레어도에 따라 넓어지며 회로의 모든 칸을 맞는 색(파랑 또는 주황)으로 채우면 공명 보너스를 얻을 수 있다. 또한 칩셋으로 얻을 수 있는 능력이체 한계가 있으므로 이를 고려하여 회로를 채우는 것이 중요하다. </br>
+        </br>
+        정보 분석에는 원시 데이터 샘플이나 순정 데이터 샘플이 필요하며 샘플은 정보임무를 수행하거나 시간마다 자동 충전되는 것을 수집하면 된다. 순정 데이터 샘플은 원시 데이터 샘플에 비해 핵심 데이터나 높은 등급의 칩셋을 얻을 확률이 증가한다. </br>
+        핵심 데이터를 분해하면 데이터 패치를 얻을 수 있고 이를 이용해 5성을 달성한 중장비부대의 등급 업을 진행할 수 있다. </br>
+        </br>
+        중장비 부대는 화력 소대, 차량 지원소대, 철혈 포획소대 전부를 합친 용어지만 현재 차량 지원소대와 철혈 포획소대는 업데이트되지 않았기 때문에 화력 소대만 존재한다. 화력 소대에는 현재 대전차 무기(ATW), 유탄발사기(AGL), 박격포(MTR)이 존재한다. 
+      </p>
+      <h1 id="hoc_list"><a href="#index" style="font-size: 20pt;">2</a>. 화력 소대 목록</h1>
+      <hr>
+      <h2>2.1. ATW: BGM-71</h2>
+      <table>
+        <tr>
+          <th rowspan="2" colspan="2">능력치</th>
+          <th colspan="5">상승한계</th>
+          <th colspan="5">공명 보너스</th>
+        </tr>
+        <tr>
+          <th class="in_cell">등급</th>
+          <th class="in_cell">살상</th>
+          <th class="in_cell">파쇄</th>
+          <th class="in_cell">정밀</th>
+          <th class="in_cell">장전</th>
+          <th class="in_cell">칸 수</th>
+          <th class="in_cell">살상</th>
+          <th class="in_cell">파쇄</th>
+          <th class="in_cell">정밀</th>
+          <th class="in_cell">장전</th>
+        </tr>
+        <tr>
+          <th class="in_cell">살상</th>
+          <td>52 / 155</td>
+          <td>★</td>
+          <td>95</td>
+          <td>165</td>
+          <td>96</td>
+          <td>23</td>
+          <td>16</td>
+          <td>40</td>
+          <td>-</td>
+          <td>10</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th class="in_cell">파쇄</th>
+          <td>135 / 402</td>
+          <td>★★</td>
+          <td>114</td>
+          <td>198</td>
+          <td>115</td>
+          <td>28</td>
+          <td>22</td>
+          <td>-</td>
+          <td>16</td>
+          <td>12</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th class="in_cell">정밀</th>
+          <td>118 / 349</td>
+          <td>★★★</td>
+          <td>133</td>
+          <td>231</td>
+          <td>134</td>
+          <td>32</td>
+          <td>28</td>
+          <td>52</td>
+          <td>-</td>
+          <td>-</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장전</th>
+          <td>28 / 83</td>
+          <td>★★★★</td>
+          <td>162</td>
+          <td>280</td>
+          <td>162</td>
+          <td>39</td>
+          <td>32</td>
+          <td>-</td>
+          <td>20</td>
+          <td>16</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th class="in_cell">부대규모</th>
+          <td>2</td>
+          <td>★★★★★</td>
+          <td>190</td>
+          <td>329</td>
+          <td>191</td>
+          <td>46</td>
+          <td>36</td>
+          <td>66</td>
+          <td>30</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th class="in_cell">지원거리</th>
+          <td>1~2</td>
+          <td colspan="5"></td>
+          <td>합계</td>
+          <td>158</td>
+          <td>66</td>
+          <td>38</td>
+          <td>9</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>스킬 목록</th>
+          <th>스킬명</th>
+          <th>효과</th>
+          <th>수치</th>
+        </tr>
+        <tr>
+          <th class="in_cell">스킬 1</th>
+          <td>충전 미사일</td>
+          <td>
+            2발 발사 후 강화 미사일을 발사</br>
+            폭심지에 추가 피해 & 파쇄(초탄 적용됨)
+          </td>
+          <td>
+            추가 피해(배): 0.9 / 1 / 1.1 / 1.2 / 1.3 / 1.4 / 1.5 / 1.6 / 1.7 / 1.8</br>
+            추가 파쇄(%): 10 / 15 / 20 / 25 / 30 / 35 / 40 / 45 / 50 / 55 / 60
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">스킬 2</th>
+          <td>장전 프로세스</td>
+          <td>
+            장전할 때마다 장전 속도 상승
+          </td>
+          <td>
+            장전 상승(%): 5 / 5.3 / 5.6 / 5.9 / 6.2 / 6.8 / 7.1 / 7.4 / 7.7 / 8
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">스킬 3</th>
+          <td>사냥 취미</td>
+          <td>
+            같은 대상 공격 시 피해량 증가</br>
+            최대 5중첩
+          </td>
+          <td>
+            피해 증가(%): 5 / 5.5 / 6 / 6.5 / 7 / 8 / 8.5 / 9 / 9.5 / 10
+          </td>
+        </tr>
+      </table>
+      <h2>2.2. AGL: AGS-30</h2>
+      <table>
+        <tr>
+          <th rowspan="2" colspan="2">능력치</th>
+          <th colspan="5">상승한계</th>
+          <th colspan="5">공명 보너스</th>
+        </tr>
+        <tr>
+          <th class="in_cell">등급</th>
+          <th class="in_cell">살상</th>
+          <th class="in_cell">파쇄</th>
+          <th class="in_cell">정밀</th>
+          <th class="in_cell">장전</th>
+          <th class="in_cell">칸 수</th>
+          <th class="in_cell">살상</th>
+          <th class="in_cell">파쇄</th>
+          <th class="in_cell">정밀</th>
+          <th class="in_cell">장전</th>
+        </tr>
+        <tr>
+          <th class="in_cell">살상</th>
+          <td>27 / 78</td>
+          <td>★</td>
+          <td>53</td>
+          <td>65</td>
+          <td>60</td>
+          <td>117</td>
+          <td>16</td>
+          <td>18</td>
+          <td>-</td>
+          <td>8</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th class="in_cell">파쇄</th>
+          <td>49 / 144</td>
+          <td>★★</td>
+          <td>64</td>
+          <td>78</td>
+          <td>72</td>
+          <td>140</td>
+          <td>24</td>
+          <td>-</td>
+          <td>10</td>
+          <td>-</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <th class="in_cell">정밀</th>
+          <td>67 / 198</td>
+          <td>★★★</td>
+          <td>75</td>
+          <td>91</td>
+          <td>84</td>
+          <td>163</td>
+          <td>30</td>
+          <td>24</td>
+          <td>-</td>
+          <td>14</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장전</th>
+          <td>130 / 386</td>
+          <td>★★★★</td>
+          <td>90</td>
+          <td>111</td>
+          <td>102</td>
+          <td>198</td>
+          <td>34</td>
+          <td>-</td>
+          <td>16</td>
+          <td>-</td>
+          <td>16</td>
+        </tr>
+        <tr>
+          <th class="in_cell">부대규모</th>
+          <td>2</td>
+          <td>★★★★★</td>
+          <td>106</td>
+          <td>130</td>
+          <td>120</td>
+          <td>233</td>
+          <td>38</td>
+          <td>42</td>
+          <td>-</td>
+          <td>-</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <th class="in_cell">지원거리</th>
+          <td>1~2</td>
+          <td colspan="5"></td>
+          <td>합계</td>
+          <td>84</td>
+          <td>26</td>
+          <td>22</td>
+          <td>46</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>스킬 목록</th>
+          <th>스킬명</th>
+          <th>효과</th>
+          <th>수치</th>
+        </tr>
+        <tr>
+          <th class="in_cell">스킬 1</th>
+          <td>슈퍼 그레네이드</td>
+          <td>
+            3발마다 강화된 유탄 발사</br>
+          </td>
+          <td>
+            추가 피해(배): 1.6 / 1.66 / 1.72 / 1.78 / 1.84 / 1.96 / 2.02 / 2.08 / 2.14 / 2.2</br>
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">스킬 2</th>
+          <td>영점조절</td>
+          <td>
+            지원 전투시 정밀 상승
+          </td>
+          <td>
+            정밀 상승(%): 15 / 16.5 / 18 / 19.5 / 21 / 24 / 25.5 / 27 / 28.5 / 30
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">스킬 3</th>
+          <td>관통 충격파</td>
+          <td>
+            한 발마다 40% 확률로</br>
+            지속시간 동안 초당 파쇄 효과 발생
+          </td>
+          <td>
+            지속 시간(초): 4 / 4.2 / 4.4 / 4.6 / 4.8 / 5.2 / 5.4 / 5.6 / 5.8 / 6</br>
+            파쇄량(%): 10 / 11 / 12 / 13 / 14 / 16 / 17 / 18 / 19 / 20
+          </td>
+        </tr>
+      </table>
+      <h2>2.2. MTR: 2B14</h2>
+      <table>
+        <tr>
+          <th rowspan="2" colspan="2">능력치</th>
+          <th colspan="5">상승한계</th>
+          <th colspan="5">공명 보너스</th>
+        </tr>
+        <tr>
+          <th class="in_cell">등급</th>
+          <th class="in_cell">살상</th>
+          <th class="in_cell">파쇄</th>
+          <th class="in_cell">정밀</th>
+          <th class="in_cell">장전</th>
+          <th class="in_cell">칸 수</th>
+          <th class="in_cell">살상</th>
+          <th class="in_cell">파쇄</th>
+          <th class="in_cell">정밀</th>
+          <th class="in_cell">장전</th>
+        </tr>
+        <tr>
+          <th class="in_cell">살상</th>
+          <td>51 / 152</td>
+          <td>★</td>
+          <td>114</td>
+          <td>29</td>
+          <td>45</td>
+          <td>54</td>
+          <td>16</td>
+          <td>45</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th class="in_cell">파쇄</th>
+          <td>20 / 58</td>
+          <td>★★</td>
+          <td>136</td>
+          <td>35</td>
+          <td>54</td>
+          <td>64</td>
+          <td>20</td>
+          <td>-</td>
+          <td>6</td>
+          <td>14</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th class="in_cell">정밀</th>
+          <td>46 / 135</td>
+          <td>★★★</td>
+          <td>159</td>
+          <td>41</td>
+          <td>63</td>
+          <td>75</td>
+          <td>24</td>
+          <td>60</td>
+          <td>-</td>
+          <td>-</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장전</th>
+          <td>54 / 160</td>
+          <td>★★★★</td>
+          <td>193</td>
+          <td>49</td>
+          <td>77</td>
+          <td>91</td>
+          <td>28</td>
+          <td>-</td>
+          <td>9</td>
+          <td>-</td>
+          <td>16</td>
+        </tr>
+        <tr>
+          <th class="in_cell">부대규모</th>
+          <td>2</td>
+          <td>★★★★★</td>
+          <td>227</td>
+          <td>58</td>
+          <td>90</td>
+          <td>107</td>
+          <td>32</td>
+          <td>87</td>
+          <td>-</td>
+          <td>8</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th class="in_cell">지원거리</th>
+          <td>1~3</td>
+          <td colspan="5"></td>
+          <td>합계</td>
+          <td>192</td>
+          <td>15</td>
+          <td>22</td>
+          <td>22</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>스킬 목록</th>
+          <th>스킬명</th>
+          <th>효과</th>
+          <th>수치</th>
+        </tr>
+        <tr>
+          <th class="in_cell">스킬 1</th>
+          <td>진지폭격</td>
+          <td>
+            주기적으로 강화 포탄 발사</br>
+            4 반경에 피해
+          </td>
+          <td>
+            발사 주기(초): 24 / 21 / 18 / 16 / 15 / 14 / 13 / 12 / 11 / 10</br>
+            추가 피해(배): 1.2 / 1.26 / 1.32 / 1.38 / 1.44 / 1.56 / 1.62 / 1.68 / 1.74 / 1.8
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">스킬 2</th>
+          <td>살을 찢는 교훈</td>
+          <td>
+            왜곡 방벽이 없는 적에게 추가 피해
+          </td>
+          <td>
+            추가 피해(배): 0.1 / 0.115 / 0.13 / 0.145 / 0.16 / 0.19 / 0.205 / 0.22 / 0.235 / 0.25
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">스킬 3</th>
+          <td>교란장막</td>
+          <td>
+            명중 시 40% 확률로</br>
+            지속시간 동안 대상의 화력, 명중 감소
+          </td>
+          <td>
+            지속 시간(초): 3 / 3.2 / 3.4 / 3.6 / 3.8 / 4.2 / 4.4 / 4.6 / 4.8 / 5</br>
+            감소량(%): 5 / 5.7 / 6.4 / 7.1 / 7.8 / 9.2 / 9.9 / 10.6 / 11.3 / 12
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
