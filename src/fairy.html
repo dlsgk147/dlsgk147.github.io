@@ -1,1 +1,1351 @@
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>요정</title>
+    <link type="text/css" rel="stylesheet" href="basic.css">
+    <link type="text/css" rel="stylesheet" href="frame.css">
+    <style>
+      table {
+        position: relative;
+        margin: 10px auto 10px auto;
+        width: 1080px;
+      }
+      th {
+        width: 80px;
+      }
+      th[class="in_cell"] {
+        background_color: rgb(196,196,196);
+      }
+      td.name_ability {
+        width: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="https://dlsgk147.github.io/index.html"><img src="https://raw.githubusercontent.com/dlsgk147/dlsgk147.github.io/master/image/title_logo.png" alt=""></a>
+    </header>
+    <section id="menu">
+      <ol>
+        <li><a href="https://dlsgk147.github.io/src/info.html">기본 정보</a></li>
+        <li><a href="https://dlsgk147.github.io/src/tdoll.html">전술인형</a></li>
+        <li><a href="https://dlsgk147.github.io/src/equip.html">장비</a></li>
+        <li><a href="https://dlsgk147.github.io/src/fairy.html">요정</a></li>
+        <li><a href="https://dlsgk147.github.io/src/hoc.html">중장비부대</a></li>
+        <li><a href="https://dlsgk147.github.io/src/manufacture.html">인형제조/장비제조</a></li>
+     </ol>
+    </section>
+    <div id="index">
+      목차
+      <ol class="list" style="list-style-type: none;">
+        <li><a href="#outline">1</a>. 개요</li>
+        <li><a href="#fairy_list">2</a>. 종류</li>
+          <ol class="sublist">
+            <li>전투요정</li>
+            <li>전략요정</li>
+            <li>이벤트 입수 요정</li>
+          </ol>
+        <li><a href="#property">3</a>. 특성</li>
+      </ol>
+    </div>
+    <div class="menu">
+      <h1 id="outline"><a href="#index" style="font-size: 20pt;">1</a>. 개요</h1>
+      <hr>
+      <p>
+        장비 중형제조로 제조 가능. 제조식, 확률 등은 <a href="manufacture.html">인형제조/장비제조</a> 항목 참조</br>
+        스킬은 <span style="color: rgb(242,94,101);">전투 타입</span>과 <span style="color: rgb(74,201,255);">전략 타입</span>이 있다. 전투 타입은 다음 전투에만 영향을 미치는 대신 쿨타임이 없고, 전략 타입은 턴 단위로 영향을 주지만 쿨타임이 존재한다. 예외적으로, 지휘 요정은 전략 타입이지만 스킬이 다음 전투에만 적용된다. </br>
+        스킬을 사용하는 데에는 지령이 사용되며 스킬마다 소모량이 다르다. 지령은 03:00, 09:00, 15:00, 21:00의 6시간 간격으로 충전된다. </br>
+        지령의 최대량, 충전 속도 등은 숙소 &gt; 부속실 &gt; 요정의 방 에서 관련 설비를 업그레이드하여 올릴 수 있다. </br>
+        인형의 레어도는 항상 1성으로 시작하며 레어도를 올리기 위해서는 레벨과 개발치가 필요하다. 개발치는 다른 요정을 사용하여 올릴 수 있다. </br>
+        레벨이 올라가면 버프 계수가 올라가며 레어도가 올라가면 특성의 발동 확률과 버프 증폭 수치가 증가한다. </br>
+        개발치는 인형 1명당 10이 상승하며 동일 요정인 경우 10배, 동일 특성인 경우 1.5배가 상승한다. </br>
+      </p>
+      <table style="width: 560px;">
+        <tr>
+          <th>레어도</th>
+          <th>요구 개발치 / 이벤트 요정</th>
+          <th>제한 레벨</th>
+          <th>버프 증폭</th>
+        </tr>
+        <tr>
+          <td>★</td>
+          <td>-</td>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>★★</td>
+          <td>100 / 100</td>
+          <td>20</td>
+          <td>1.25</td>
+        </tr>
+        <tr>
+          <td>★★★</td>
+          <td>400 / 100</td>
+          <td>40</td>
+          <td>1.5</td>
+        </tr>
+        <tr>
+          <td>★★★★</td>
+          <td>1000 / 150</td>
+          <td>70</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>★★★★★</td>
+          <td>1500 / 200</td>
+          <td>100</td>
+          <td>2.5</td>
+        </tr>
+      </table>
+      <h1 id="fairy_list"><a href="#index" style="font-size: 20pt;">2</a>. 종류</h1>
+      <hr>
+      <h2>2.1. 전투요정</h2>
+      <table>
+        <tr>
+          <th>이름</th>
+          <th colspan="2">능력치(성장 B)</th>
+          <th colspan="3">스킬</th>
+        </tr>
+        <tr>
+          <td class="name_ability" rowspan="6">용사요정</th>
+          <th class="in_cell">화력(A)</th>
+          <td class="name_ability">4.8 / 25</td>
+          <th class="in_cell" rowspan="6">전투효율</th>
+          <td rowspan="2" colspan="2">전투중인 인형의 화력, 사속 증가
+        </tr>
+        <tr>
+          <th class="in_cell">명중(A)</th>
+          <td>16 / 80</td>
+        </tr>
+        <tr>
+          <th class="in_cell">회피(B)</th>
+          <td>8 / 40</td>
+          <td rowspan="2">지령 소모치</td>
+          <td rowspan="2">1</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장갑(B)</th>
+          <td>2 / 10</td>
+        </tr>
+        <tr>
+          <th class="in_cell">치명타량(-)</th>
+          <td>-</td>
+          <td rowspan="2">증가치(%)</td>
+          <td rowspan="2">
+            화력: 5 / 7 / 8 / 10 / 12 / 13 / 15 / 17 / 18 / 20</br>
+            사속: 5 / 6 / 6 / 7 / 7 / 8 / 8 / 9 / 9 / 10
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">타입</th>
+          <td style="color: rgb(242,94,101)">전투</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>이름</th>
+          <th colspan="2">능력치(성장 B)</th>
+          <th colspan="3">스킬</th>
+        </tr>
+        <tr>
+          <td class="name_ability" rowspan="6">격노요정</th>
+          <th class="in_cell">화력(B)</th>
+          <td class="name_ability">2.8 / 15</td>
+          <th class="in_cell" rowspan="6">살의분출</th>
+          <td rowspan="2" colspan="2">전투중인 인형의 명중, 치명타율 증가
+        </tr>
+        <tr>
+          <th class="in_cell">명중(-)</th>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th class="in_cell">회피(B)</th>
+          <td>8 / 40</td>
+          <td rowspan="2">지령 소모치</td>
+          <td rowspan="2">1</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장갑(B)</th>
+          <td>2 / 10</td>
+        </tr>
+        <tr>
+          <th class="in_cell">치명타량(A)</th>
+          <td>8 / 40</td>
+          <td rowspan="2">증가치(%)</td>
+          <td rowspan="2">
+            명중: 10 / 14 / 19 / 23 / 28 / 32 / 37 / 41 / 46 / 50</br>
+            치명타율: 10 / 12 / 13 / 15 / 17 / 18 / 20 / 22 / 23 / 25
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">타입</th>
+          <td style="color: rgb(242,94,101)">전투</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>이름</th>
+          <th colspan="2">능력치(성장 B)</th>
+          <th colspan="3">스킬</th>
+        </tr>
+        <tr>
+          <td class="name_ability" rowspan="6">방패요정</th>
+          <th class="in_cell">화력(A)</th>
+          <td class="name_ability">4.4 / 22</td>
+          <th class="in_cell" rowspan="6">진압강화</th>
+          <td rowspan="2" colspan="2">20초간 모든 산탄총 장갑 증가
+        </tr>
+        <tr>
+          <th class="in_cell">명중(-)</th>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th class="in_cell">회피(-)</th>
+          <td>-</td>
+          <td rowspan="2">지령 소모치</td>
+          <td rowspan="2">3</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장갑(S)</th>
+          <td>5.2 / 25</td>
+        </tr>
+        <tr>
+          <th class="in_cell">치명타량(B)</th>
+          <td>4.4 / 22</td>
+          <td rowspan="2">증가치(%)</td>
+          <td rowspan="2">
+            장갑: 15 / 19 / 23 / 27 / 31 / 34 / 38 / 42 / 46 / 50
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">타입</th>
+          <td style="color: rgb(242,94,101)">전투</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>이름</th>
+          <th colspan="2">능력치(성장 B)</th>
+          <th colspan="3">스킬</th>
+        </tr>
+        <tr>
+          <td class="name_ability" rowspan="6">수호요정</th>
+          <th class="in_cell">화력(A)</th>
+          <td class="name_ability">4 / 20</td>
+          <th class="in_cell" rowspan="6">에너지 쉴드</th>
+          <td rowspan="2" colspan="2">모든 기관단총에게 피해를 흡수하는 보호막 생성
+        </tr>
+        <tr>
+          <th class="in_cell">명중(A)</th>
+          <td>12 / 60</td>
+        </tr>
+        <tr>
+          <th class="in_cell">회피(S)</th>
+          <td>16 / 80</td>
+          <td rowspan="2">지령 소모치</td>
+          <td rowspan="2">3</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장갑(-)</th>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th class="in_cell">치명타량(-)</th>
+          <td>-</td>
+          <td rowspan="2">방어막 체력</td>
+          <td rowspan="2">
+            40 / 50 / 60 / 70 / 80 / 90 / 100 / 110 / 130 / 150
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">타입</th>
+          <td style="color: rgb(242,94,101)">전투</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>이름</th>
+          <th colspan="2">능력치(성장 A)</th>
+          <th colspan="3">스킬</th>
+        </tr>
+        <tr>
+          <td class="name_ability" rowspan="6">도발요정</th>
+          <th class="in_cell">화력(B)</th>
+          <td class="name_ability">3.2 / 18</td>
+          <th class="in_cell" rowspan="6">도발표적</th>
+          <td rowspan="2" colspan="2">적의 공격을 받아주는 더미 설치
+        </tr>
+        <tr>
+          <th class="in_cell">명중(B)</th>
+          <td>10 / 58</td>
+        </tr>
+        <tr>
+          <th class="in_cell">회피(C)</th>
+          <td>4.8 / 28</td>
+          <td rowspan="2">지령 소모치</td>
+          <td rowspan="2">3</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장갑(C)</th>
+          <td>1.6 / 8</td>
+        </tr>
+        <tr>
+          <th class="in_cell">치명타량(B)</th>
+          <td>4.4 / 25</td>
+          <td rowspan="2">더미 체력</td>
+          <td rowspan="2">
+            400 / 480 / 550 / 650 / 800 / 950 / 1100 / 1250 / 1400 / 1600
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">타입</th>
+          <td style="color: rgb(242,94,101)">전투</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>이름</th>
+          <th colspan="2">능력치(성장 B)</th>
+          <th colspan="3">스킬</th>
+        </tr>
+        <tr>
+          <td class="name_ability" rowspan="6">저격요정</th>
+          <th class="in_cell">화력(-)</th>
+          <td class="name_ability">-</td>
+          <th class="in_cell" rowspan="6">저격명령</th>
+          <td rowspan="2" colspan="2">가장 체력이 많은 적을 저격
+        </tr>
+        <tr>
+          <th class="in_cell">명중(A)</th>
+          <td>17.6 / 88</td>
+        </tr>
+        <tr>
+          <th class="in_cell">회피(C)</th>
+          <td>5.6 / 28</td>
+          <td rowspan="2">지령 소모치</td>
+          <td rowspan="2">2</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장갑(A)</th>
+          <td>3.2 / 15</td>
+        </tr>
+        <tr>
+          <th class="in_cell">치명타량(A)</th>
+          <td>7.2 / 36</td>
+          <td rowspan="2">피해량</td>
+          <td rowspan="2">
+            2500 / 4000 / 5500 / 7000/ 8500 / 10000 / 12500 / 15000 / 17500 / 20000
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">타입</th>
+          <td style="color: rgb(242,94,101)">전투</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>이름</th>
+          <th colspan="2">능력치(성장 B)</th>
+          <th colspan="3">스킬</th>
+        </tr>
+        <tr>
+          <td class="name_ability" rowspan="6">포격요정</th>
+          <th class="in_cell">화력(S)</th>
+          <td class="name_ability">10.8 / 55</td>
+          <th class="in_cell" rowspan="6">포격명령</th>
+          <td rowspan="2" colspan="2">박격포를 발사하여 2.5범위의 적들에게 피해
+        </tr>
+        <tr>
+          <th class="in_cell">명중(-)</th>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th class="in_cell">회피(A)</th>
+          <td>11.2 / 56</td>
+          <td rowspan="2">지령 소모치</td>
+          <td rowspan="2">3</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장갑(C)</th>
+          <td>1.2 / 6</td>
+        </tr>
+        <tr>
+          <th class="in_cell">치명타량(-)</th>
+          <td>-</td>
+          <td rowspan="2">피해량</td>
+          <td rowspan="2">
+            200 / 300 / 400 / 500 / 600 / 700 / 800 / 900 / 1000 / 1200
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">타입</th>
+          <td style="color: rgb(242,94,101)">전투</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>이름</th>
+          <th colspan="2">능력치(성장 A)</th>
+          <th colspan="3">스킬</th>
+        </tr>
+        <tr>
+          <td class="name_ability" rowspan="6">공습요정</th>
+          <th class="in_cell">화력(A)</th>
+          <td class="name_ability">4.8 / 30</td>
+          <th class="in_cell" rowspan="6">공습발령</th>
+          <td rowspan="2" colspan="2">공습지원을 호출하여 적 전체에게 피해
+        </tr>
+        <tr>
+          <th class="in_cell">명중(C)</th>
+          <td>8 / 50</td>
+        </tr>
+        <tr>
+          <th class="in_cell">회피(C)</th>
+          <td>6.4 / 40</td>
+          <td rowspan="2">지령 소모치</td>
+          <td rowspan="2">3</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장갑(C)</th>
+          <td>1.6 / 10</td>
+        </tr>
+        <tr>
+          <th class="in_cell">치명타량(-)</th>
+          <td>-</td>
+          <td rowspan="2">피해량</td>
+          <td rowspan="2">
+            80 / 120 / 160 / 200 / 240 / 280 / 320 / 360 / 400 / 500
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">타입</th>
+          <td style="color: rgb(242,94,101)">전투</td>
+        </tr>
+      </table>
+      <h2>2.2. 전략요정</h2>
+      <table>
+        <tr>
+          <th>이름</th>
+          <th colspan="2">능력치(성장 A)</th>
+          <th colspan="3">스킬</th>
+        </tr>
+        <tr>
+          <td class="name_ability" rowspan="6">방어요정</th>
+          <th class="in_cell">화력(A)</th>
+          <td class="name_ability">4 / 22</td>
+          <th class="in_cell" rowspan="6">임시방호</th>
+          <td rowspan="2" colspan="2">1턴 간 제대가 받는 피해 감소. 20초 지속
+        </tr>
+        <tr>
+          <th class="in_cell">명중(-)</th>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th class="in_cell">회피(A)</th>
+          <td>14.4 / 80</td>
+          <td rowspan="2">지령 소모치 / 쿨다운</td>
+          <td rowspan="2">5 / 1턴</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장갑(A)</th>
+          <td>3.6 / 20</td>
+        </tr>
+        <tr>
+          <th class="in_cell">치명타량(-)</th>
+          <td>-</td>
+          <td rowspan="2">피해 감소치(%)</td>
+          <td rowspan="2">
+            10 / 12 / 14 / 17 / 19 / 21 / 23 / 26 / 28 / 30
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">타입</th>
+          <td style="color: rgb(74,201,255)">전략</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>이름</th>
+          <th colspan="2">능력치(성장 A)</th>
+          <th colspan="3">스킬</th>
+        </tr>
+        <tr>
+          <td class="name_ability" rowspan="6">증원요정</th>
+          <th class="in_cell">화력(C)</th>
+          <td class="name_ability">2 / 12</td>
+          <th class="in_cell" rowspan="6">증원호출</th>
+          <td rowspan="2" colspan="2">
+            제대 중 체력이 가장 적은 전술인형의 편제를 1기 증원</br>
+            1턴 간 모든 인형의 회피를 20초 증가</br>
+            숨겨진 효과: 기관단총의 화력 상승
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">명중(-)</th>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th class="in_cell">회피(A)</th>
+          <td>14 / 88</td>
+          <td rowspan="2">지령 소모치 / 쿨다운</td>
+          <td rowspan="2">2 / 1턴</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장갑(B)</th>
+          <td>2 / 12</td>
+        </tr>
+        <tr>
+          <th class="in_cell">치명타량(C)</th>
+          <td>2.4 / 15</td>
+          <td rowspan="2">회피 증가치(%)</td>
+          <td rowspan="2">
+            3 / 3.5 / 4 / 4.5 / 5 / 6 / 7 / 8 / 9 / 10
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">타입</th>
+          <td style="color: rgb(74,201,255)">전략</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>이름</th>
+          <th colspan="2">능력치(성장 A)</th>
+          <th colspan="3">스킬</th>
+        </tr>
+        <tr>
+          <td class="name_ability" rowspan="6">공수요정</th>
+          <th class="in_cell">화력(A)</th>
+          <td class="name_ability">5.6 / 36</td>
+          <th class="in_cell" rowspan="6">공수낙하</th>
+          <td rowspan="2" colspan="2">
+            제대를 일정 범위 안의 헬리포트로 이동</br>
+            이동 후 2턴간 능력치 하락</br>
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">명중(-)</th>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th class="in_cell">회피(C)</th>
+          <td>5.2 / 32</td>
+          <td rowspan="2">지령 소모치 / 쿨다운</td>
+          <td rowspan="2">5 / 5턴</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장갑(C)</th>
+          <td>1.2 / 8</td>
+        </tr>
+        <tr>
+          <th class="in_cell">치명타량(A)</th>
+          <td>6.4 / 40</td>
+          <td rowspan="2">능력치 감소치(%)</td>
+          <td rowspan="2">
+            90 / 85 / 80 / 75 / 70 / 65 / 60 / 55 / 50 / 40
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">타입</th>
+          <td style="color: rgb(74,201,255)">전략</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>이름</th>
+          <th colspan="2">능력치(성장 C)</th>
+          <th colspan="3">스킬</th>
+        </tr>
+        <tr>
+          <td class="name_ability" rowspan="6">매설요정</th>
+          <th class="in_cell">화력(S)</th>
+          <td class="name_ability">5.6 / 25</td>
+          <th class="in_cell" rowspan="6">지뢰매설</th>
+          <td rowspan="2" colspan="2">
+            적이 없는 인접거점에 2턴간 유지되는 지뢰 매설</br>
+            보스 제외 밟은 적에게 현재 체력 비례 피해</br>
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">명중(B)</th>
+          <td>10 / 44</td>
+        </tr>
+        <tr>
+          <th class="in_cell">회피(S)</th>
+          <td>19.6 / 85</td>
+          <td rowspan="2">지령 소모치 / 쿨다운</td>
+          <td rowspan="2">5 / 3턴</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장갑(-)</th>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th class="in_cell">치명타량(-)</th>
+          <td>-</td>
+          <td rowspan="2">피해치(%)</td>
+          <td rowspan="2">
+            20 / 23 / 26 / 30 / 33 / 36 / 40 / 43 / 46 / 50
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">타입</th>
+          <td style="color: rgb(74,201,255)">전략</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>이름</th>
+          <th colspan="2">능력치(성장 C)</th>
+          <th colspan="3">스킬</th>
+        </tr>
+        <tr>
+          <td class="name_ability" rowspan="6">로켓요정</th>
+          <th class="in_cell">화력(-)</th>
+          <td class="name_ability">-</td>
+          <th class="in_cell" rowspan="6">터렛설치</th>
+          <td rowspan="2" colspan="2">
+            비어 있는 인접거점에 터렛 설치</br>
+            보스 제외 2범위 내 일정 수의 적들에게 현재 체력 비례 피해</br>
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">명중(B)</th>
+          <td>10 / 44</td>
+        </tr>
+        <tr>
+          <th class="in_cell">회피(-)</th>
+          <td>-</td>
+          <td rowspan="2">지령 소모치 / 쿨다운</td>
+          <td rowspan="2">10 / 3턴</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장갑(S)</th>
+          <td>5.2 / 22</td>
+        </tr>
+        <tr>
+          <th class="in_cell">치명타량(S)</th>
+          <td>8 / 35</td>
+          <td rowspan="2">타겟 수 / 피해치(%)</td>
+          <td rowspan="2">
+            타겟: 4 / 4 / 4 / 4 / 4 / 5 / 5 / 5 / 5 / 5</br>
+            피해치: 20 / 23 / 26 / 30 / 33 / 36 / 40 / 43 / 46 / 50
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">타입</th>
+          <td style="color: rgb(74,201,255)">전략</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>이름</th>
+          <th colspan="2">능력치(성장 C)</th>
+          <th colspan="3">스킬</th>
+        </tr>
+        <tr>
+          <td class="name_ability" rowspan="6">공사요정</th>
+          <th class="in_cell">화력(A)</th>
+          <td class="name_ability">3.6 / 15</td>
+          <th class="in_cell" rowspan="6">요새구축</th>
+          <td rowspan="2" colspan="2">
+            현재 거점에 고정요새 건설</br>
+            3턴간 요새에서 전투 시 능력치 증가</br>
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">명중(A)</th>
+          <td>12 / 50</td>
+        </tr>
+        <tr>
+          <th class="in_cell">회피(A)</th>
+          <td>9.6 / 40</td>
+          <td rowspan="2">지령 소모치 / 쿨다운</td>
+          <td rowspan="2">5 / 3턴</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장갑(A)</th>
+          <td>2.4 / 10</td>
+        </tr>
+        <tr>
+          <th class="in_cell">치명타량(A)</th>
+          <td>4.8 / 20</td>
+          <td rowspan="2">능력치 증가치(%)</td>
+          <td rowspan="2">
+            10 / 12 / 14 / 17 / 19 / 21 / 23 / 26 / 28 / 30
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">타입</th>
+          <td style="color: rgb(74,201,255)">전략</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>이름</th>
+          <th colspan="2">능력치(성장 C)</th>
+          <th colspan="3">스킬</th>
+        </tr>
+        <tr>
+          <td class="name_ability" rowspan="6">지휘요정</th>
+          <th class="in_cell">화력(S)</th>
+          <td class="name_ability">8 / 36</td>
+          <th class="in_cell" rowspan="6">초월경험</th>
+          <td rowspan="2" colspan="2">
+            다음 전투에서 제대의 경험치 획득량 증가</br>
+            (경험특훈에서 사용 불가)</br>
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">명중(-)</th>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th class="in_cell">회피(B)</th>
+          <td>7.6 / 32</td>
+          <td rowspan="2">지령 소모치 / 쿨다운</td>
+          <td rowspan="2">1 / 1턴</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장갑(B)</th>
+          <td>2 / 8</td>
+        </tr>
+        <tr>
+          <th class="in_cell">치명타량(S)</th>
+          <td>8.4 / 36</td>
+          <td rowspan="2">경험치 증가치(%)</td>
+          <td rowspan="2">
+            5 / 8 / 10 / 12 / 14 / 16 / 18 / 20 / 22 / 25
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">타입</th>
+          <td style="color: rgb(74,201,255)">전략</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>이름</th>
+          <th colspan="2">능력치(성장 C)</th>
+          <th colspan="3">스킬</th>
+        </tr>
+        <tr>
+          <td class="name_ability" rowspan="6">수색요정</th>
+          <th class="in_cell">화력(S)</th>
+          <td class="name_ability">7.6 / 32</td>
+          <th class="in_cell" rowspan="6">효율수색</th>
+          <td rowspan="2" colspan="2">
+            다음 전투에서 희귀 인형 발견 확률 증가
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">명중(S)</th>
+          <td>20 / 80</td>
+        </tr>
+        <tr>
+          <th class="in_cell">회피(S)</th>
+          <td>16 / 64</td>
+          <td rowspan="2">지령 소모치 / 쿨다운</td>
+          <td rowspan="2">1 / 1턴</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장갑(-)</th>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th class="in_cell">치명타량(-)</th>
+          <td>-</td>
+          <td rowspan="2">드랍 증가치</td>
+          <td rowspan="2">
+            아주 조금 / 조금 / 조금 많이 / 많이 / 아주 많이
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">타입</th>
+          <td style="color: rgb(74,201,255)">전략</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>이름</th>
+          <th colspan="2">능력치(성장 B)</th>
+          <th colspan="3">스킬</th>
+        </tr>
+        <tr>
+          <td class="name_ability" rowspan="6">조명요정</th>
+          <th class="in_cell">화력(-)</th>
+          <td class="name_ability">-</td>
+          <th class="in_cell" rowspan="6">야간조명</th>
+          <td rowspan="2" colspan="2">
+            20초간 모든 인형의 명중 증가</br>
+            야간 전역에서 시야 증가 (3레벨 1칸, 10레벨 2칸)</br>
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">명중(S)</th>
+          <td>20 / 90</td>
+        </tr>
+        <tr>
+          <th class="in_cell">회피(B)</th>
+          <td>7.2 / 32</td>
+          <td rowspan="2">지령 소모치 / 쿨다운</td>
+          <td rowspan="2">5 / 5턴</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장갑(B)</th>
+          <td>1.6 / 8</td>
+        </tr>
+        <tr>
+          <th class="in_cell">치명타량(S)</th>
+          <td>8.4 / 38</td>
+          <td rowspan="2">명중 증가치(%)</td>
+          <td rowspan="2">
+            10 / 12 / 14 / 16 / 18 / 20 / 22 / 24 / 27 / 30
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">타입</th>
+          <td style="color: rgb(74,201,255)">전략</td>
+        </tr>
+      </table>
+      <h2>2.3. 이벤트 입수 인형</h2>
+      <table>
+        <tr>
+          <th>이름</th>
+          <th colspan="2">능력치(성장 S)</th>
+          <th colspan="3">스킬</th>
+        </tr>
+        <tr>
+          <td class="name_ability" rowspan="6">황금요정</th>
+          <th class="in_cell">화력(C)</th>
+          <td class="name_ability">2 / 20</td>
+          <th class="in_cell" rowspan="6">황금율법</th>
+          <td rowspan="2" colspan="2">
+            운명으로부터 온 계시가 당신의 의지를 충만하게 합니다. 
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">명중(C)</th>
+          <td>6 / 62</td>
+        </tr>
+        <tr>
+          <th class="in_cell">회피(C)</th>
+          <td>4.8 / 50</td>
+          <td rowspan="2">지령 소모치</td>
+          <td rowspan="2">0</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장갑(C)</th>
+          <td>1.2 / 12</td>
+        </tr>
+        <tr>
+          <th class="in_cell">치명타량(C)</th>
+          <td>2.4 / 25</td>
+          <td rowspan="2">효과</td>
+          <td rowspan="2">
+            요정이 반짝반짝 빛납니다. 끝
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">타입</th>
+          <td style="color: rgb(242,94,101)">전투</td>
+        </tr>
+      </table>
+      <p>
+        DEEP DIVE 이벤트 랭킹전 보상</br>
+        상위 50%: 랜덤 특성 1개</br>
+        상위 20%: 랜덤 특성 2개</br>
+        상위 10%: 황금형 1개 + 랜덤 특성 2개</br>
+      </p>
+      <table>
+        <tr>
+          <th>이름</th>
+          <th colspan="2">능력치(성장 S)</th>
+          <th colspan="3">스킬</th>
+        </tr>
+        <tr>
+          <td class="name_ability" rowspan="6">취사요정</th>
+          <th class="in_cell">화력(D)</th>
+          <td class="name_ability">1.2 / 10</td>
+          <th class="in_cell" rowspan="6">긴급배식!</th>
+          <td rowspan="2" colspan="2">
+            다음 전투에서 화력상승 / 사속상승 / 명중상승 / 회피상승 / 화력감소 중 랜덤 효과 부여
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">명중(D)</th>
+          <td>2.4 / 20</td>
+        </tr>
+        <tr>
+          <th class="in_cell">회피(B)</th>
+          <td>9.2 / 80</td>
+          <td rowspan="2">지령 소모치</td>
+          <td rowspan="2">1</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장갑(B)</th>
+          <td>2.4 / 20</td>
+        </tr>
+        <tr>
+          <th class="in_cell">치명타량(D)</th>
+          <td>1.2 / 10</td>
+          <td rowspan="2">상승치 / 감소치(%)</td>
+          <td rowspan="2">
+            화력/사속: 8 / 9 / 10 / 11 / 12 / 13 / 14 / 16 / 18 / 20</br>
+            명중: 12 / 14 / 15 / 16 / 18 / 20 / 22 / 24 / 27 / 30</br>
+            회피: 10 / 12 / 13 / 14 / 15 / 16 / 18 / 20 / 22 / 25</br>
+            화력 감소: 15 / 14 / 13 / 12 / 11 / 10 / 8 / 5 / - / -
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">타입</th>
+          <td style="color: rgb(242,94,101)">전투</td>
+        </tr>
+      </table>
+      <p>
+        특이점 이벤트 랭킹전 보상</br>
+        상위 30%: 랜덤 특성 1개</br>
+        상위 10%: 급양계 특성 1개 + 랜덤 특성 1개</br>
+        20만 점 이상: 랜덤 특성 1개</br>
+      </p>
+      <table>
+        <tr>
+          <th>이름</th>
+          <th colspan="2">능력치(성장 S)</th>
+          <th colspan="3">스킬</th>
+        </tr>
+        <tr>
+          <td class="name_ability" rowspan="6">폭죽요정</th>
+          <th class="in_cell">화력(B)</th>
+          <td class="name_ability">3.6 / 32</td>
+          <th class="in_cell" rowspan="6">늦여름 폭죽</th>
+          <td rowspan="2" colspan="2">
+            다음 전투에서 10초간 모든 인형의 명중 상승
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">명중(B)</th>
+          <td>8.4 / 75</td>
+        </tr>
+        <tr>
+          <th class="in_cell">회피(D)</th>
+          <td>3.6 / 32</td>
+          <td rowspan="2">지령 소모치</td>
+          <td rowspan="2">3</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장갑(D)</th>
+          <td>0.8 / 8</td>
+        </tr>
+        <tr>
+          <th class="in_cell">치명타량(-)</th>
+          <td>-</td>
+          <td rowspan="2">상승치(%)</td>
+          <td rowspan="2">
+            35 / 40 / 45 / 50 / 55 / 60 / 65 / 70 / 75 / 80</br>
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">타입</th>
+          <td style="color: rgb(242,94,101)">전투</td>
+        </tr>
+      </table>
+      <p>
+        난류연속 이벤트 랭킹전 보상</br>
+        상위 30%: 랜덤 특성 1개</br>
+        상위 10%: 현란계 특성 1개 + 랜덤 특성 1개</br>
+        88888점 이상: 랜덤 특성 1개</br>
+      </p>
+      <table>
+        <tr>
+          <th>이름</th>
+          <th colspan="2">능력치</th>
+          <th colspan="3">스킬</th>
+        </tr>
+        <tr>
+          <td class="name_ability" rowspan="6">클로에</th>
+          <th class="in_cell">화력(B)</th>
+          <td class="name_ability">4.4 / 18</td>
+          <th class="in_cell" rowspan="6">통곡의 인형</th>
+          <td rowspan="2" colspan="2">
+            적의 공격을 유도하는 인형 2개 설치</br>
+            인형은 2초마다 모든 적에게 공격</br>
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">명중(A)</th>
+          <td>13.6 / 55</td>
+        </tr>
+        <tr>
+          <th class="in_cell">회피(A)</th>
+          <td>16 / 64</td>
+          <td rowspan="2">지령 소모치</td>
+          <td rowspan="2">2</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장갑(C)</th>
+          <td>1.6 / 6</td>
+        </tr>
+        <tr>
+          <th class="in_cell">치명타량(-)</th>
+          <td>-</td>
+          <td rowspan="2">인형 체력 / 피해량</td>
+          <td rowspan="2">
+            체력: 150 / 175 / 200 / 250 / 300 / 350 / 400 / 450 / 500 / 600
+            피해량: 15 / 22 / 30 / 40 / 50 / 60 / 70 / 80 / 90 / 100
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">타입</th>
+          <td style="color: rgb(242,94,101)">전투</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>이름</th>
+          <th colspan="2">능력치</th>
+          <th colspan="3">스킬</th>
+        </tr>
+        <tr>
+          <td class="name_ability" rowspan="6">야에 사쿠라</th>
+          <th class="in_cell">화력(A)</th>
+          <td class="name_ability">6.4 / 26</td>
+          <th class="in_cell" rowspan="6">비옥환세</th>
+          <td rowspan="2" colspan="2">
+            적 위치에 붉은 기둥이 생성되어 0.5초마다 피해. 2초 지속
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">명중(-)</th>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th class="in_cell">회피(C)</th>
+          <td>6 / 24</td>
+          <td rowspan="2">지령 소모치</td>
+          <td rowspan="2">3</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장갑(C)</th>
+          <td>1.6 / 6</td>
+        </tr>
+        <tr>
+          <th class="in_cell">치명타량(A)</th>
+          <td>8 / 32</td>
+          <td rowspan="2">피해량</td>
+          <td rowspan="2">
+            20 / 30 / 40 / 50 / 60 / 70 / 80 / 90 / 100 / 120
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">타입</th>
+          <td style="color: rgb(242,94,101)">전투</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>이름</th>
+          <th colspan="2">능력치</th>
+          <th colspan="3">스킬</th>
+        </tr>
+        <tr>
+          <td class="name_ability" rowspan="6">카구야히메</th>
+          <th class="in_cell">화력(-)</th>
+          <td class="name_ability">-</td>
+          <th class="in_cell" rowspan="6">야타의 휘광</th>
+          <td rowspan="2" colspan="2">
+            해당 제대 주위 범위 2구역에 야타의 거울 설치</br>
+            레이저를 발사하여 구역 내 무작위 3기의 적에게 현재 체력 비례 피해(보스 무효)</br>
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">명중(A)</th>
+          <td>17.6 / 70</td>
+        </tr>
+        <tr>
+          <th class="in_cell">회피(C)</th>
+          <td>6 / 24</td>
+          <td rowspan="2">지령 소모치 / 쿨다운</td>
+          <td rowspan="2">8 / 3턴</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장갑(A)</th>
+          <td>3.6 / 15</td>
+        </tr>
+        <tr>
+          <th class="in_cell">치명타량(A)</th>
+          <td>8 / 32</td>
+          <td rowspan="2">피해치(%)</td>
+          <td rowspan="2">
+            10 / 11 / 12 / 13 / 14  / 15 / 16 / 17 / 18 / 20
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">타입</th>
+          <td style="color: rgb(74,201,255)">전략</td>
+        </tr>
+      </table>
+      <p>
+        중국서버 한정 이벤트 "독법사"에서 입수 가능한 요정. 한국서버는 입수 불가
+      </p>
+      <table>
+        <tr>
+          <th>이름</th>
+          <th colspan="2">능력치(성장 B)</th>
+          <th colspan="3">스킬</th>
+        </tr>
+        <tr>
+          <td class="name_ability" rowspan="6">스이</th>
+          <th class="in_cell">화력(-)</th>
+          <td class="name_ability">-</td>
+          <th class="in_cell" rowspan="6">I Want You</th>
+          <td rowspan="2" colspan="2">
+            비어 있는 인접 거점에 꽃잎을 뿌림</br>
+            2턴 간 해당 지점에서 전투 시 능력치 상승</br>
+            공사요정과 중첩되지 않음
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">명중(-)</th>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th class="in_cell">회피(A)</th>
+          <td>14 / 70</td>
+          <td rowspan="2">지령 소모치 / 쿨다운</td>
+          <td rowspan="2">3 / 2턴</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장갑(A)</th>
+          <td>3.6 / 18</td>
+        </tr>
+        <tr>
+          <th class="in_cell">치명타량(A)</th>
+          <td>6 / 30</td>
+          <td rowspan="2">능력치 상승치(%)</td>
+          <td rowspan="2">
+            8 / 9 / 10 / 11 / 12 / 13 / 14 / 16 / 18 / 20
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">타입</th>
+          <td style="color: rgb(74,201,255)">전략</td>
+        </tr>
+      </table>
+      <p>
+        DJMAX RESPECT 콜라보 이벤트인 영광의 날 이벤트 상점에서 교환권 80개로 교환 가능한 요정. 총 3개 교환 가능
+      </p>
+      <table>
+        <tr>
+          <th>이름</th>
+          <th colspan="2">능력치(성장 B)</th>
+          <th colspan="3">스킬</th>
+        </tr>
+        <tr>
+          <td class="name_ability" rowspan="6">프레이야 & 카밀리아</th>
+          <th class="in_cell">화력(A)</th>
+          <td class="name_ability">4.4 / 22</td>
+          <th class="in_cell" rowspan="6">Oblivion</th>
+          <td rowspan="2" colspan="2">
+            30초 간 붉은 칸의 아군 인형은 화력과 명중 상승, 회피와 장갑 감소</br>
+            노란 칸의 아군 인형은 회피와 장갑 상승, 화력과 명중 감소</br>
+            각각의 칸은 전투 시 랜덤하게 배치됨
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">명중(B)</th>
+          <td>10 / 50</td>
+        </tr>
+        <tr>
+          <th class="in_cell">회피(D)</th>
+          <td>2 / 10</td>
+          <td rowspan="2">지령 소모치</td>
+          <td rowspan="2">1</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장갑(B)</th>
+          <td>2 / 10</td>
+        </tr>
+        <tr>
+          <th class="in_cell">치명타량(B)</th>
+          <td>4.4 / 22</td>
+          <td rowspan="2">상승치 / 감소치(%)</td>
+          <td rowspan="2">
+            상승: 10 / 12 / 14 / 16 / 18 / 20 / 22 / 24 / 27 / 30</br>
+            감소: 10 / 11 / 12 / 13 / 14 / 15 / 16 / 17 / 18 / 20</br>
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">타입</th>
+          <td style="color: rgb(242,94,101)">전투</td>
+        </tr>
+      </table>
+      <p>
+        스이와 마찬가지로 영광의 날 이벤트 상점에서 각각 교환권 80개로 3개까지 교환 가능
+      </p>
+      <table>
+        <tr>
+          <th>이름</th>
+          <th colspan="2">능력치(성장 B)</th>
+          <th colspan="3">스킬</th>
+        </tr>
+        <tr>
+          <td class="name_ability" rowspan="6">세라 & 니나</th>
+          <th class="in_cell">화력(B)</th>
+          <td class="name_ability">2.8 / 15</td>
+          <th class="in_cell" rowspan="6">LadyMade Star</th>
+          <td rowspan="2" colspan="2">
+            20초 동안 모든 인형의 화력 상승, 적군 전체 명중 감소</br>
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">명중(B)</th>
+          <td>8 / 40</td>
+        </tr>
+        <tr>
+          <th class="in_cell">회피(A)</th>
+          <td>10 / 50</td>
+          <td rowspan="2">지령 소모치</td>
+          <td rowspan="2">1</td>
+        </tr>
+        <tr>
+          <th class="in_cell">장갑(-)</th>
+          <td>-</td>
+        </tr>
+        <tr>
+          <th class="in_cell">치명타량(B)</th>
+          <td>4 / 20</td>
+          <td rowspan="2">상승치 / 감소치(%)</td>
+          <td rowspan="2">
+            화력 상승: 5 / 7 / 8 / 10 / 12 / 13 / 15 / 17 / 18 / 20</br>
+            명중 감소: 5 / 5 / 6 / 6 / 7 / 7 / 8 / 8 / 9 / 10</br>
+          </td>
+        </tr>
+        <tr>
+          <th class="in_cell">타입</th>
+          <td style="color: rgb(242,94,101)">전투</td>
+        </tr>
+      </table>
+      <p>
+        영광의 날 이벤트 1-3 전역 클리어 보상
+      </p>
+      <h1 id="property"><a href="#index" style="font-size: 20pt;">3</a>. 특성</h1>
+      <hr>
+      <table style="width: 960px;">
+        <tr>
+          <th colspan="2">특성 종류</th>
+          <th>발동 확률(1~5성)</th>
+          <th>효과</th>
+        </tr>
+        <tr>
+          <td rowspan="2" class="name_ability">살상계</td>
+          <td class="name_ability">Ⅰ</td>
+          <td>40 / 60 / 80 / 90 / 100</td>
+          <td>아군 전원의 화력 12% 증가</td>
+        </tr>
+        <tr>
+          <td style="color: rgb(255,201,14);">Ⅱ</td>
+          <td>20 / 40 / 60 / 80 / 100</td>
+          <td>아군 전원의 화력 15% 증가</td>
+        </tr>
+        <tr>
+          <td rowspan="2">정밀계</td>
+          <td>Ⅰ</td>
+          <td>40 / 60 / 80 / 90 / 100</td>
+          <td>아군 전원의 명중 20% 증가</td>
+        </tr>
+        <tr>
+          <td style="color: rgb(255,201,14);">Ⅱ</td>
+          <td>20 / 40 / 60 / 80 / 100</td>
+          <td>아군 전원의 명중 25% 증가</td>
+        </tr>
+        <tr>
+          <td rowspan="2">회피계</td>
+          <td>Ⅰ</td>
+          <td>40 / 60 / 80 / 90 / 100</td>
+          <td>아군 전원의 회피 15% 증가</td>
+        </tr>
+        <tr>
+          <td style="color: rgb(255,201,14);">Ⅱ</td>
+          <td>20 / 40 / 60 / 80 / 100</td>
+          <td>아군 전원의 회피 20% 증가</td>
+        </tr>
+        <tr>
+          <td rowspan="2">장갑계</td>
+          <td>Ⅰ</td>
+          <td>40 / 60 / 80 / 90 / 100</td>
+          <td>아군 전원의 장갑 8% 증가</td>
+        </tr>
+        <tr>
+          <td style="color: rgb(255,201,14);">Ⅱ</td>
+          <td>20 / 40 / 60 / 80 / 100</td>
+          <td>아군 전원의 장갑 10% 증가</td>
+        </tr>
+        <tr>
+          <td rowspan="2">필살계</td>
+          <td>Ⅰ</td>
+          <td>40 / 60 / 80 / 90 / 100</td>
+          <td>아군 전원의 치명타율 40% 증가</td>
+        </tr>
+        <tr>
+          <td style="color: rgb(255,201,14);">Ⅱ</td>
+          <td>20 / 40 / 60 / 80 / 100</td>
+          <td>아군 전원의 치명타율 50% 증가</td>
+        </tr>
+        <tr>
+          <td colspan="2">선봉계</td>
+          <td>30 / 50 / 70 / 90 / 100</td>
+          <td>아군 기관단총의 화력 8%, 회피 12% 증가</td>
+        </tr>
+        <tr>
+          <td colspan="2">돌격계</td>
+          <td>30 / 50 / 70 / 90 / 100</td>
+          <td>아군 돌격소총의 화력 10%, 공격 속도 8% 증가</td>
+        </tr>
+        <tr>
+          <td colspan="2">조준계</td>
+          <td>30 / 50 / 70 / 90 / 100</td>
+          <td>아군 소총의 화력 8%, 공격 속도 10% 증가</td>
+        </tr>
+        <tr>
+          <td colspan="2">완강계</td>
+          <td>30 / 50 / 70 / 90 / 100</td>
+          <td>아군 산탄총의 장갑 8%, 치명타율 20% 증가</td>
+        </tr>
+        <tr>
+          <td colspan="2">진압계</td>
+          <td>30 / 50 / 70 / 90 / 100</td>
+          <td>아군 기관총의 화력 10%, 명중 15% 증가</td>
+        </tr>
+        <tr>
+          <td colspan="2">예민계</td>
+          <td>30 / 50 / 70 / 90 / 100</td>
+          <td>아군 권총의 회피 10%, 치명타율 30% 증가</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="color: rgb(255,201,14);">격양계</td>
+          <td>20 / 40 / 60 / 80 / 100</td>
+          <td>
+            아군 전원의 화력이 8초마다 10% 증가. 최대 3중첩</br>
+            (전투 시작시 1스택)</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="color: rgb(255,201,14);">황금계</td>
+          <td>40 / 60 / 80 / 90 / 100</td>
+          <td>황금색으로 빛납니다. 황금요정 전용 특성</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="color: rgb(255,201,14);">급양계</td>
+          <td>40 / 60 / 80 / 90 / 100</td>
+          <td>푸른색으로 빛납니다. 급양요정 전용 특성</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="color: rgb(255,201,14);">현란계</td>
+          <td>40 / 60 / 80 / 90 / 100</td>
+          <td>폭죽이 터집니다. 폭죽요정 전용 특성</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
