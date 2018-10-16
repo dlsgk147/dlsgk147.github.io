@@ -47,6 +47,7 @@
       }
       .sublist {
         list-style-type: circle;
+        margin-left: 20px;
         padding-left: 20px;
       }
       .menu {
